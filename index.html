@@ -1,138 +1,20 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>What Makes Good Design?</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+---
+layout: default
+---
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<div class="home">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-        <style type="text/css">
-      body {
-        font-family: 'Open Sans', sans-serif;
-      }
-    </style>
-    </head>
-    <body class="loading">
-    
-        <main>
-         
-          <section id="slide-1" class="homeSlide">
-            <div  class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-1">
-              <div class="hsContainer">
-              <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-1 h2">
-                <h2>What makes<br />Beautiful Design?</h2>
-                <p>A look at what works when designing a webpage.</p>
-              </div>
-              </div>
-            </div>
-        </section>
-        
-        <section id="slide-2" class="homeSlide">
-          <div class="bcg" data-anchor-target="#slide-2">
-          <!-- <div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-2"> -->
-            <div class="hsContainer">
-              <div class="hsContent">
-                <h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">Simply</h2>
-                <p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 p"><a href= "https://www.rijksmuseum.nl/en"> Intuitive.</a> <a href="http://www.datadrivenlondon.com/">  Designed.</a> <a href="http://www.amazon.com/">Accessible.</a></p>
-              </div>
-              </div>
-          </div>
-        </section>
-        
-      <section id="slide-3" class="homeSlide">
-      <div class="hsContainer" id="intuitive" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-3">
+  <h1>Posts</h1>
 
-                  <h1>  <a class="white-dec" href="https://www.rijksmuseum.nl/en">Simply Intuitive</h1></a>
-                 <p>When a user sees it, they know exactly how to use it. The moment the user arrives at a website, they should know what they have the ability to do, and how to get there.  It should afford a few simple features that are well signified.  Imagine you are in a restaurant, and you go to use the bathroom.  When you arrive, there’s no handle!  This is an example of non-intuitive design – it removes focus from the users task, in this case, to use the bathroom. Our user should not need to stop and think about how to get to where they need to be.  According to Krug, author of “Don’t Make me Think” – a guide to web usability, the web page should be obvious and self-explanatory. As a web designer, your job is to get rid of the question marks; no one likes to be confused.  If your architecture is not intuitive, the number of question marks grows, and the user’s ability to get from point A to point B diminishes.</p>
-      </div>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
-        <div class="hsContainer" id="intuitive" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-3">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-                 <p style="padding-top: 70px" >In the case of the museum website, the first items my eye goes to are the three links in the top left corner.  The “F-pattern” describes the way in which user’s read web content, two horizontal stripes, followed by a vertical stripe. This site in particular utilizes this idea well.  All of the clickable links fall into this F-shaped pattern, allowing the user to easily navigate to where they need to go.  Within two seconds of looking at the website I know that I have three main options:  I can plan my visit, view the collection, and read more about the museum.  That’s it.  The user is relinquished of his or her duty to decide what to do, the website effectively tells you what you can do.  The key here is to allow the user to interact quickly and effectively with the architecture you’ve provided.  The user’s number of question marks should be zero.</p>
-        </div>
-
-        <div class="hsContainer" id="intuitive" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-3">
-
-                 <p style="padding-top: 40px" >Although, this idea of intuitiveness on a website is quite subjective.  Let’s assume that you, the designer, are a rational person.  You want people to navigate your site with ease; you want it to be intuitive.  Easier said than done, even the webpage you’re on right now may not be intuitive to you, but it is intuitive to me.  A design itself is not intuitive, it’s whether each individual user feels that it is intuitive.  So how do we effectively design a website to be as intuitive as it can be?  The answer is we need to build based on our audience.  If your audience were tech savvy programmers you would design it completely differently if your target were grandmas looking to send birthday cards to their grandchildren.  This is challenging if your target audience is tech savvy nerds, grandmas, and everything in between.  There is a huge range of people visiting your site.   We can call this the knowledge gap: the difference in knowledge coming into the site, and ability to do what the user needs to do.  The narrower your audience, the easier it is to design for.  The solution?  TEST, TEST, TEST.  Are your links being clicked?  How long do people spend on each page?  An intuitive webpage is difficult because of it’s subjectivity, but it is possible to achieve.</p>
-        </div>
-            
-           
-            
-        
-      </section>
-
-    <section id="slide-4" class="homeSlide" style="background-color: white;">
-      <div class="hsContainer" id="intuitive" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-4">
-
-                  <h1><a class="black-dec" href="ttp://www.datadrivenlondon.com/">Simply Designed</h1></a>
-                 <p style="color: black;">It has to be visually appealing.  Your user is much more likely to stay on your website if it’s visually pleasing.  But visual appeal is subjective you say?  Yes, it is, but it doesn’t need to be gorgeous to everyone, it needs to be bearable for everyone and fantastic to some.  This can be done through the use of whitespace, smart tabs, continuous scrolling, constant headers, and large content.</p> 
-                  <p style="color:black; text-indent: 30px;">Let’s first talk about whitespace.  We want to get our content across as best we can without putting too much of a cognitive load on our users.  Whitespace!  It comes back to that “F-design” I mentioned before; your user is going to quickly scan the page in order to split the page into a few digestible bites instead of trying to soak it all in at once.  Our job, as designers, is to facilitate that; complex structures are difficult to read, scan, analyze, and work with. If you have a choice between whitespace and using a line to separate content, it’s usually better to use the whitespace.
-</p>
-      </div>
-
-        <div class="hsContainer" id="intuitive" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-4">
-
-                 <p style="padding-top: 70px; color:black;">Okay, on to navigation tabs.  These things provide the user with a roadmap to your website.  It is important that these are concise, and well thought out.  For example, ‘Events’, ‘Resources’, and ‘Blogs’.   We’ve split the site into three main categories, which can easily be broken down into more granular pieces. This brings me to my next point; we want our tabs to be hierarchal.  Hierarchical structures reduce complexity, the better you manage to provide users with a sense of visual hierarchy, the easier your content will be to perceive.  When the user navigates past the initial tabs, there should be more tabs waiting for them to split the information into even smaller bite-sized pieces.  Remember, question marks are bad!  If this is the road map for your website, it should be available everywhere.  As the user scrolls, their map should not disappear.
-
-
-</p>
-      </div>
-
-        <div class="hsContainer" id="intuitive" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-4">
-
-                 <p style="padding-top: 70px; color:black; text-indent: 30px;">This is a big one; the website’s content, and how it’s presented.  This includes typography, photos and strategically placed text.  We need to remember that humans are visual creatures, so everything must be aesthetically pleasing.  The current trend in websites is huge opaque pictures with large text over it.  If done properly, this is a very effective way to get your message across while staying beautiful.  A bit about text: Enough with the fluff, we all know how clever you are, and we don’t care.  It’s beneficial to talk business when you use your precious words on a webpage.  With the use of whitespace, large pictures, and large font, a lot of focus is driven towards the content we do have.  Make it worth the user’s time. </p>
-                  <p style="color:black; text-indent: 30px;"> I firmly believe that our DataDriven website uses all of these design practices quite fantastically, please check it out, use it as a template.  It’s goddamn gorgeous.
-
-</p>
-
-        </div>
-
-
-   
-        
-      </section>
-
-          <section id="slide-4" class="homeSlide">
-      <div class="hsContainer" id="intuitive" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-4">
-
-                  <h1><a class="white-dec" href="http://www.amazon.com/">Simply Accessible</h1></a>
-                 <p>Let’s not overlook functionality.  Not only does a website need to be intuitive and beautiful, it needs to work as intended, and show users how the product works.  This is not to be confused with the intuitiveness of a website.  Accessibility refers to how readily available information pertaining to the product is, whereas intuitiveness refers to how easily the user can navigate the site.  Current web designs tend to adopt the 1-2-3-step approach.  I think this is a fantastic way to present the information needed by the user; they are not overburdened with details, those are behind the curtains, and can be read if necessary.  As a designer, you need to let the user know what functions they can access, and these functions must be simple to use.  Take Amazon.com’s one-click-buy feature for example.  Not only does the user know that they can buy something, but they can buy it with literally one-click.  One-click-buy is an extremely accessible feature, let us all strive to have features as good as this one.
-</p>
-      </div>
-
-        <div class="hsContainer" id="intuitive" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-4">
-
-                 <p style="padding-top: 70px;">Accessibility also means a working website.  The front-end design must be visually pleasing as I’ve explained thus far, but the back-end must also be flawless.  I don’t want to get too technical, but the architecture of your databases, and web-hosting services must be reliable.  No one can see all your pretty white space and images if they can’t even access the site.  Most people think that design is only an aesthetic thing, but in terms of web-design, it is much more than that.  One must design their site at optimal speeds; one cannot make an API call to Google calendars every time one wants to pull some data.   The website’s designer may need to have the data be pulled every night at 3:00am, when no user’s are online, and store it in a database.  Aesthetic websites are nothing without proper back-end web design.
-</p>
-      </div>
-
-
-
-   
-        
-      </section>
-       
-    </main>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/imagesloaded.js"></script>
-        <script src="js/waypoints.min.js"></script>
-        <script src="js/skrollr.js"></script>
-        <!--[if lt IE 9]>
-    <script type="text/javascript" src="js/skrollr.ie.min.js"></script>
-    <![endif]-->
-        <script src="js/_main.js"></script>
-
-    </body>
-</html>
+</div>
