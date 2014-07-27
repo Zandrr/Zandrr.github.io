@@ -11,5 +11,4 @@ github_username:  Zandrr
 markdown: kramdown
 permalink: pretty
 
-source:      _source
-destination: _deploy
+auto: true
