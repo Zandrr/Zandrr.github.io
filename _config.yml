@@ -1,11 +1,12 @@
-# # Site settings
-# email: alexander.campbell@colorado.edu
-# description: ""
-# baseurl: ""
-# url: "http://alexcampbell.co"
-# twitter_username: CampbellAlexS
-# github_username:  Zandrr
+# Site settings
+title: Alex Campbell
+email: alexander.campbell@colorado.edu
+description: ""
+baseurl: ""
+url: "http://alexcampbell.co"
+twitter_username: CampbellAlexS
+github_username:  Zandrr
 
-# # Build settings
-# markdown: kramdown
-# permalink: pretty
+# Build settings
+markdown: kramdown
+permalink: pretty
