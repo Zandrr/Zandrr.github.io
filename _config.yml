@@ -10,3 +10,6 @@ github_username:  Zandrr
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+source:      _source
+destination: _deploy
