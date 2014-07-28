@@ -5,7 +5,7 @@ permalink: /about/
 ---
 <h2>Where I talk about me.</h2>
 <p>I went to the principals office more often than not when I was in middle school.  I didn't like being told what to do
-  or how to do something, so I didn't listen.  I guess that's how I ended up wanting to work for myself, I get to make my own rules.  So I guess I'm what people call an "entrepreneur". Oh yeah, I'm also a student on the side.</p>
+  or how to do something, so I didn't listen.  I guess that's how I ended up wanting to work for myself, I get to make my own rules.  So I guess I'm what people call an "entrepreneur". Oh yeah, I'm also a computer science and business student.</p>
 
 <h2>Where I Talk About the Stuff I do</h2>
 <h1><b>Helping New Organic Foods Find a Home</b></h1>
