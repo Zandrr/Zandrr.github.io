@@ -22,5 +22,3 @@ permalink: /about/
   <p>HackCU!  We are working on putting on a massive hackathon in collaboration with <a href="http://mlh.io">Major League Hackers</a>.  This is awesome because it helps students find internships, it helps companies find awesome developers, and it allows students to get started on that fitbit for dogs that they've always been dreaming of.</p>
 
 
-![image](https://www.dropbox.com/s/kd4kfv2bj2ac65f/Screenshot%202013-10-14%2019.05.37.png?dl=0)
-
