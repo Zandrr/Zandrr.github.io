@@ -9,9 +9,6 @@ categories: jekyll update
 ###Over the past few months I've been trying to do things I never thought I would do.
 
 
-Growing up, I didn't love school.  By *'didn't love school'* I mean that I hated it.  I would fake sick 2-3 times a week. I thought my parents would believe me.  Every time.   So naturally, I never thought I would become school...
-
-
 Last week I gave a presentation to my class of ~50 people.  It wasn’t so bad. It was among my peers.  I was perceived as a student, so they treated me that way.
 
 
@@ -31,7 +28,7 @@ I thought back to my first pitch ever, and how terribly I did, but more importan
 ###And when the class was over, I felt amazing.
 
 
-Isn't it funny how your emotions can do a complete 180 in just thirty minutes?  I felt fantastic, and I remember my friend commenting on how different I was acting.
+Isn't it funny how your emotions can do a complete 180 in just thirty minutes?  I felt fantastic.  Emails were pouring in asking me for a more advanced class.  
 
 
 ###If you want to make a difference in this world, you need to be able to verbalize your thoughts.
