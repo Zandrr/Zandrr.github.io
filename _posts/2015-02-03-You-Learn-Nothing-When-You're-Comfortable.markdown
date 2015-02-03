@@ -34,7 +34,7 @@ Isn't it funny how your emotions can do a complete 180 in just thirty minutes?  
 ###If you want to make a difference in this world, you need to be able to verbalize your thoughts.
 
 
-One of the best mentors I’ve ever had is named Andrew Homeyer.  He once said if you want to make a difference in this world, you need to be able to verbalize your thoughts.  You need to be able to communicate your ideas physically in front of hundreds if not thousands of people.   I always knew this was true, but I never truly understood it I gave this talk.
+One of the best mentors I’ve ever had is named Andrew Homeyer.  He once said if you want to make a difference in this world, you need to be able to verbalize your thoughts.  You need to be able to communicate your ideas physically in front of hundreds if not thousands of people.   I always knew this was true, but I never truly understood it until I gave this talk.
 
 
 ###Check it out:
