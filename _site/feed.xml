@@ -62,8 +62,8 @@
     <description></description>
     <link>http://alexcampbell.co/</link>
     <atom:link href="http://alexcampbell.co/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 03 Feb 2015 10:29:51 -0700</pubDate>
-    <lastBuildDate>Tue, 03 Feb 2015 10:29:51 -0700</lastBuildDate>
+    <pubDate>Sun, 26 Apr 2015 15:23:08 -0600</pubDate>
+    <lastBuildDate>Sun, 26 Apr 2015 15:23:08 -0600</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
@@ -86,7 +86,7 @@
 
 &lt;h3 id=&quot;if-you-want-to-make-a-difference-in-this-world-you-need-to-be-able-to-verbalize-your-thoughts&quot;&gt;If you want to make a difference in this world, you need to be able to verbalize your thoughts.&lt;/h3&gt;
 
-&lt;p&gt;One of the best mentors I’ve ever had is named Andrew Homeyer.  He once said if you want to make a difference in this world, you need to be able to verbalize your thoughts.  You need to be able to communicate your ideas physically in front of hundreds if not thousands of people.   I always knew this was true, but I never truly understood it I gave this talk.&lt;/p&gt;
+&lt;p&gt;One of the best mentors I’ve ever had is named Andrew Homeyer.  He once said if you want to make a difference in this world, you need to be able to verbalize your thoughts.  You need to be able to communicate your ideas physically in front of hundreds if not thousands of people.   I always knew this was true, but I never truly understood it until I gave this talk.&lt;/p&gt;
 
 &lt;h3 id=&quot;check-it-out&quot;&gt;Check it out:&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=WmSYLfGIvrA&amp;amp;feature=youtu.be&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/WmSYLfGIvrA/0.jpg&quot; alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;5&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -129,6 +129,410 @@ There will be failure, that’s unavoidable.  It’s what you do in the face of 
         <pubDate>Sat, 26 Jul 2014 13:38:21 -0600</pubDate>
         <link>http://alexcampbell.co/jekyll/update/2014/07/26/Failing-with-Confidence/</link>
         <guid isPermaLink="true">http://alexcampbell.co/jekyll/update/2014/07/26/Failing-with-Confidence/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Introduction to APIs</title>
+        <description>&lt;h3 id=&quot;motivation&quot;&gt;Motivation&lt;/h3&gt;
+
+&lt;p&gt;When I first started to learn how to create and consume API’s, I was lost.  I jumped through three to four tutorials before I had someone sit down and teach me.&lt;/p&gt;
+
+&lt;p&gt;My aim in this tutorial is to teach people with some technical experience how to build an API and how to consume data from other APIs.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;prerequisites&quot;&gt;Prerequisites:&lt;/h3&gt;
+
+&lt;p&gt;1) node installed&lt;/p&gt;
+
+&lt;p&gt;2) running on linux or mac.  If you’re running windows you’re probably doing it wrong.&lt;/p&gt;
+
+&lt;p&gt;3) some knowledge of javascript&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;agenda&quot;&gt;Agenda:&lt;/h3&gt;
+
+&lt;p&gt;What is an API?&lt;/p&gt;
+
+&lt;p&gt;What is REST?&lt;/p&gt;
+
+&lt;p&gt;CODE TIME!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;what-is-an-api&quot;&gt;What is an API?&lt;/h3&gt;
+
+&lt;p&gt;API is an acronym for “application program interface”.  This is just fancy talk for how two software components interact. Programmers create “building blocks”, an API, to make it easier for other programmers to interact with their database or hardware. This could be how a programmer interacts with the hardware to create a nice graphical user interface.  It could be how Twitter exposes their database to make cool applications!&lt;/p&gt;
+
+&lt;h5 id=&quot;tldr&quot;&gt;tl;dr:&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;An interface for interacting with databases or hardware&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;what-is-rest&quot;&gt;What is REST?&lt;/h3&gt;
+
+&lt;p&gt;Representational State Transfer.  Yeah, ignore that.  REST is the most popular style of communication for web applications. It allows us to communicate via URI and HTTP (think of URI as a URL, like: http://alexcampbell.co).  That’s all we need to know for now, let’s jump into code!&lt;/p&gt;
+
+&lt;h5 id=&quot;tldr-1&quot;&gt;tl;dr:&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;A way to communicate via URI and HTTP&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;our-tools&quot;&gt;Our Tools&lt;/h3&gt;
+
+&lt;p&gt;For this application we’ll be using &lt;strong&gt;&lt;em&gt;Node.js and Express.js.&lt;/em&gt;&lt;/strong&gt;  Not because it’s better than anything else, but because I’m most comfortable using it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt; is a platform for building network applications (servers).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Express.js&lt;/strong&gt; is a package that makes using node.js easier.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;#Part 1: Creating our own API&lt;/p&gt;
+
+&lt;p&gt;In this part, we’re going to create our own server.  We’re going to create our own server that is an API that someone else could use.  It’s not going to do much, but damnit, it’s an API nonetheless.&lt;/p&gt;
+
+&lt;h2 id=&quot;serverjs-our-first-file&quot;&gt;Server.js, our first file&lt;/h2&gt;
+&lt;p&gt;####Libraries:&lt;/p&gt;
+
+&lt;p&gt;Let’s create our barebones server. Create a file called server.js:&lt;/p&gt;
+
+&lt;p&gt;```javascript
+//server.js&lt;/p&gt;
+
+&lt;p&gt;// Include the packages we need
+var express     = require(‘express’),
+    http        = require(‘http’),
+    body_parser = require(‘body-parser’);
+```
+Okay so this first few lines we’re just including the libraries we need in order to run our application. &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;We include express so that we we can use all of the functions that the framework includes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We include http so that we can create our server using HTTP.  This will allow us to access it via URL!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We include body_parser so that we can do POST requests.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;the-basics-setting-up-our-express-app&quot;&gt;The basics, setting up our express app:&lt;/h4&gt;
+
+&lt;p&gt;```javascript
+//server.js&lt;/p&gt;
+
+&lt;p&gt;// Include the packages we need
+var express     = require(‘express’),
+    http        = require(‘http’),
+    body_parser = require(‘body-parser’);&lt;/p&gt;
+
+&lt;p&gt;var app = express(); // Create our app using express&lt;/p&gt;
+
+&lt;p&gt;//Create our app using body parser
+// This will allow us to get data from a POST
+app.use(body_parser.urlencoded({ extended: true })); &lt;/p&gt;
+
+&lt;p&gt;// Set our port
+app.set(‘port’,3000);&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;The first thing we did was create a variable called app that is equal to express.  This means that we now have an application that can utulize the express framework.&lt;/p&gt;
+
+&lt;p&gt;Next we tell our app to &lt;em&gt;use&lt;/em&gt; body_parser.  Don’t worry about the details for now, just know that it allows us to do POST requests.&lt;/p&gt;
+
+&lt;p&gt;Finally we set ‘port’ to be equal to 3000 for our application.  This means that when we run our server it will be available at http://localhost:3000.  Localhost is just your computer, so for now only you will be able to see it!&lt;/p&gt;
+
+&lt;p&gt;-
+#####tl;dr:
+&amp;gt;&lt;strong&gt;Create our app using express, use body parser to allow POST requests, and set the application’s port to 3000 so we can access 
+it at http://localhost:3000.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;lets-create-our-basic-server&quot;&gt;Let’s create our basic server:&lt;/h4&gt;
+
+&lt;p&gt;```javascript
+//server.js&lt;/p&gt;
+
+&lt;p&gt;// Include the packages we need
+var express     = require(‘express’),
+    http        = require(‘http’),
+    body_parser = require(‘body-parser’);&lt;/p&gt;
+
+&lt;p&gt;var app = express(); // Create our app using express&lt;/p&gt;
+
+&lt;p&gt;//Create our app using body parser
+// This will allow us to get data from a POST
+app.use(body_parser.urlencoded({ extended: true })); &lt;/p&gt;
+
+&lt;p&gt;// Set our port
+app.set(‘port’, 3000);&lt;/p&gt;
+
+&lt;p&gt;// Create our server using the app
+var server = http.createServer(app);&lt;/p&gt;
+
+&lt;p&gt;// Our server will listen on port 3000 and log out when it works!
+server.listen(app.get(‘port’), function(){
+  console.log(“Listening on port “+ app.get(‘port’));
+})
+ ```&lt;/p&gt;
+
+&lt;p&gt;We create a variable called server that is an http server using our express &lt;em&gt;app&lt;/em&gt; that we just created.  Finally we tell our server to &lt;em&gt;listen&lt;/em&gt; on the port we just created, 3000.  We then tell it to print out “Listening on port &lt;our port=&quot;&quot;&gt;&quot;.  Simple enough, right?&lt;/our&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;tldr-2&quot;&gt;tl;dr:&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Create a server called ‘server’ that uses http to create a server using the options we set on our app&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;callback-function&quot;&gt;Callback function?&lt;/h5&gt;
+
+&lt;p&gt;Although let’s back up a second.  Do you see how when we created the server we had this funky function as our second parameter?  This is called a callback function.  All that this is saying is the following:  “Hey server, listen on port 3000 (app.get(‘port’), and when you’re done with that print out that you’re listening”.  We’ll see a few more callback functions when we get into routes, but for now just think of it as the thing that gets done after the first function finishes.&lt;/p&gt;
+
+&lt;h5 id=&quot;tldr-3&quot;&gt;tl;dr:&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;“Hey server, listen on port 3000 (app.get(‘port’), and when you’re done with that print out that you’re listening”.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;try-it-out&quot;&gt;Try it out!&lt;/h4&gt;
+&lt;p&gt;BOOM!  You just created a server.  Hell yeah, nice job. Let’s boot it up.  Go into the directory where your server.js lives and type the command &lt;code&gt;node server.js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sorry that was mean, I knew it was going to break.  You should have an error that says something like: “Error: Cannot find module ‘express’”.  But wait we included it in our server.js file, why doesn’t it work?!&lt;/p&gt;
+
+&lt;h4 id=&quot;fixing-it&quot;&gt;Fixing it:&lt;/h4&gt;
+
+&lt;p&gt;Yes your app sees it, but the computer you’re running on doesn’t have it installed.  More specifically, the directory you’re in (where your app lives) doesn’t have it installed.  We could manually install all of the dependencies, but we’re developers, we don’t like to do things twice.  Let’s create a package.json file.  We can think of this file as the instruction manual for our application.  It tells it what it needs to install to run.&lt;/p&gt;
+
+&lt;h5 id=&quot;tldr-4&quot;&gt;tl;dr:&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;The libraries are not installed in your app.  We need to add a package.json file.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;package.json&lt;/em&gt;
+ ```json
+ {
+  “name”: “MyFirstAPI”,
+  “version”: “0.0.1”,
+  “main”: “server.js”,
+  “author”:”Alex Campbell”,&lt;/p&gt;
+
+&lt;p&gt;“dependencies”:{
+    “express”: “^4.7.4”,
+    “body-parser”: “~1.5.2”
+    }
+}
+```&lt;/p&gt;
+
+&lt;p&gt;Create this file in the same directory as your &lt;em&gt;server.js&lt;/em&gt; file.  Notice I added a few things here.  The name of my application, the version, where our main file is, and who wrote it.  This stuff is just to keep track of data associated with the application.  The interesting stuff is below in dependencies.  We include express and body-parser, good!  Although we notice that http is not there.  This is because it is built in to node.js.  So when we install node.js, we install http!&lt;/p&gt;
+
+&lt;p&gt;Now in order to run this file just type ```npm install`` in the directory that the package.json is.&lt;/p&gt;
+
+&lt;p&gt;Woohoo we installed stuff.  Well done.&lt;/p&gt;
+
+&lt;h5 id=&quot;tldr-5&quot;&gt;tl;dr:&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Add meta-data and dependencies to the file.  We don’t need HTTP because it’s included in node.js&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;try-try-again&quot;&gt;Try, try again:&lt;/h4&gt;
+
+&lt;p&gt;Let’s try to run our app again:  &lt;code&gt;node server.js&lt;/code&gt;
+Cool it’s listening on port 3000!
+Quick, go to your browser and put http://localhost:3000 into the url bar.&lt;/p&gt;
+
+&lt;p&gt;Cannot GET / ? What the hell man, I thought it would work.  Well it is working, you created a server.  Although the server doesn’t know what to do at the URL http://localhost:3000/.  If you go to http://localhost:3000/test you’ll get a similar error.  This is where routing comes into play, which is the next part of our tutorial.&lt;/p&gt;
+
+&lt;h5 id=&quot;tldr-6&quot;&gt;tl;dr:&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;The server is running, but we haven’t written any routes yet.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;lets-create-some-routes&quot;&gt;Let’s create some routes:&lt;/h3&gt;
+
+&lt;p&gt;You guys are gunna’ be impressed how easy it is to create an API.  Let’s add 3 lines of code:&lt;/p&gt;
+
+&lt;p&gt;```javascript
+//server.js&lt;/p&gt;
+
+&lt;p&gt;// Include the packages we need
+var express     = require(‘express’),
+    http        = require(‘http’),
+    body_parser = require(‘body-parser’);&lt;/p&gt;
+
+&lt;p&gt;var app = express(); // Create our app using express&lt;/p&gt;
+
+&lt;p&gt;//Create our app using body parser
+// This will allow us to get data from a POST
+app.use(body_parser.urlencoded({ extended: true })); &lt;/p&gt;
+
+&lt;p&gt;// Set our port
+app.set(‘port’, 3000);&lt;/p&gt;
+
+&lt;p&gt;// Create our server using the app
+var server = http.createServer(app);&lt;/p&gt;
+
+&lt;p&gt;// Our server will listen on port 3000 and log out when it works!
+server.listen(app.get(‘port’), function(){
+  console.log(“Listening on port “+ app.get(‘port’));
+})&lt;/p&gt;
+
+&lt;p&gt;app.get(‘/’, function(request,response){
+    response.send(“I just created an API, I am a god.”);
+  });
+```&lt;/p&gt;
+
+&lt;p&gt;Woah don’t get too hasty, let’s understand what’s going on here.  We’re telling our app the following: “When someone hits the url http://localhost:3000/, send the string over”.&lt;/p&gt;
+
+&lt;p&gt;Although it’s a bit more complex than that.  We see that callback thing again here. The reason we have this callback this is because our &lt;em&gt;app.get&lt;/em&gt; is asynchronous.  In other words, while &lt;em&gt;app.get&lt;/em&gt; is running something else on the server might be running.  We give it a callback function to tell it what to do when it’s done. But this time it has two parameters: &lt;em&gt;request&lt;/em&gt; and &lt;em&gt;response&lt;/em&gt;.  These are objects that represent data that our app is sending out and the data that our app is receiving. So when we say &lt;em&gt;response.send(“I just created an API, I am a god”)&lt;/em&gt;, &lt;strong&gt;it’s saying: “Add this string to the response object’s ‘send’ field.”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you haven’t already, go to http://localhost:3000/ and bask in your glory.&lt;/p&gt;
+
+&lt;h5 id=&quot;tldr-7&quot;&gt;tl;dr:&lt;/h5&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Add the root route (‘/’) and when someone accesses that URL send back a string.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;part-2-using-someone-elses-api&quot;&gt;Part 2: Using someone else’s API:&lt;/h1&gt;
+&lt;p&gt;In this section we are going to utulize an API that converts any string into a ‘yoda string’.  It will take a string and return how yoda might say it.  Or, Take a string and return how yoda might say it, it will.  Yes, hmmm.  Let’s do eet!&lt;/p&gt;
+
+&lt;h3 id=&quot;lets-hit-another-api&quot;&gt;Let’s hit another API!&lt;/h3&gt;
+
+&lt;p&gt;Alright let’s make it do something cool.  Let’s use an API to translate anything we say into yoda speak. I’m about to hit y’all with a lot of unfamiliar code, don’t freak out:&lt;/p&gt;
+
+&lt;p&gt;```javascript
+//server.js&lt;/p&gt;
+
+&lt;p&gt;// Include the packages we need
+var express     = require(‘express’),
+    http        = require(‘http’),
+    body_parser = require(‘body-parser’),
+    request     = require(‘request’);&lt;/p&gt;
+
+&lt;p&gt;var app = express(); // Create our app using express&lt;/p&gt;
+
+&lt;p&gt;//Create our app using body parser
+// This will allow us to get data from a POST
+app.use(body_parser.urlencoded({ extended: true })); &lt;/p&gt;
+
+&lt;p&gt;// Set our port
+app.set(‘port’, 3000);&lt;/p&gt;
+
+&lt;p&gt;// Create our server using the app
+var server = http.createServer(app);&lt;/p&gt;
+
+&lt;p&gt;// Our server will listen on port 3000 and log out when it works!
+server.listen(app.get(‘port’), function(){
+  console.log(“Listening on port “+ app.get(‘port’));
+})&lt;/p&gt;
+
+&lt;p&gt;// When we hit http://localhost:3000/ send over this string.
+  app.get(‘/’, function(req,res){
+    res.send(“I just created an API, I am a god.”);
+  });&lt;/p&gt;
+
+&lt;p&gt;// When we hit “http://localhost:3000/translate?sentence= some sentence” it will translate our string into yoda speak!
+  app.get(‘/translate’, function(req,res){
+    request({
+      url: “https://yoda.p.mashape.com/yoda”,
+      qs: {sentence: req.query.sentence},
+      headers: {
+        “X-Mashape-Key”:”W0XfNKn3JJmsh0Pq0bsfmunVYrOvp1BSVkLjsn6IP3xd0N2ChB”,
+        “Accept”: “text/plain”
+      },
+    },
+      function(err,response,body){
+        if(!err){
+          res.send(body);
+        }
+      });
+  });&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use the request library to hit third party APIs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First things first, we’re using a new library called &lt;em&gt;Request&lt;/em&gt; which allows us to easily hit third party APIs.  So let’s add it to our package.json: &lt;em&gt;request”: “~2.37.0”&lt;/em&gt; in the dependencies section.  Your package.json should now look like this:&lt;/p&gt;
+
+&lt;p&gt;```json
+{
+  “name”: “MyFirstAPI”,
+  “version”: “0.0.1”,
+  “main”: “server/server.js”,
+  “author”:”Alex Campbell”,&lt;/p&gt;
+
+&lt;p&gt;“dependencies”:{
+    “express”: “^4.7.4”,
+    “body-parser”: “~1.5.2”,
+    “request”: “~2.37.0”
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;Let’s run npm install again to update our libraries.&lt;/p&gt;
+
+&lt;p&gt;Now let’s walk through this ‘/translate’ route step by step:&lt;/p&gt;
+
+&lt;p&gt;1) we add request to the packages we need.&lt;/p&gt;
+
+&lt;p&gt;2) we will use request to make an API call to a yoda translator.  This API exists at the URL “https://yoda.p.mashape.com/yoda” so we set our url parameter to be that.&lt;/p&gt;
+
+&lt;p&gt;3) we need to set a query string.  This is going to be the sentence that is sent to the API to be yodafied (yeah I just made that word up).  We will name the query string &lt;em&gt;sentence&lt;/em&gt; so that we can make requests like: “https://yoda.p.mashape.com/yoda?&lt;em&gt;sentence&lt;/em&gt;=I%20love%20lumpy%20space”.  If we changed:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Note:  The “%20” is just a space, so go ahead and use spaces in the URL bar if you want!&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;json
+qs: {&quot;sentence&quot;: req.query.sentence}
+&lt;/code&gt;
+TO
+&lt;code&gt;json
+qs: {&quot;thing&quot;: req.query.thing}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;then we would make our request like this: “https://yoda.p.mashape.com/yoda?&lt;em&gt;thing&lt;/em&gt;=I%20love%20lumpy%20space”.&lt;/p&gt;
+
+&lt;p&gt;4) req.query.sentence?  What the hell is that?  We’re telling our app on request to look at the query string.  Within that querystring give us the value of &lt;em&gt;sentence&lt;/em&gt;.  This is whatever you typed into your URL!&lt;/p&gt;
+
+&lt;p&gt;5)  Next we need to add the headers.  This is extra data associated with our request that tells it how to act, or passes along authentication information.  Since we’re using mashape, their APIs expect an “X-MASHAPE-KEY”, so we pass it along in the headers.  Best practice, we would not expose our API key, but for the scope of this tutorial, don’t worry about it.  We also tell it to Accept text/plain.  This means that our API should only accept plain text.&lt;/p&gt;
+
+&lt;p&gt;6) After we’ve passed all this information along, we have a callback function.  So once the request is made, it will execute this function.  Similar to our “http://localhost:300/” route, we send a string across the server.  This time it’s the body of the response.&lt;/p&gt;
+
+&lt;h3 id=&quot;congrats&quot;&gt;Congrats&lt;/h3&gt;
+
+&lt;p&gt;You freakin’ did it.  You just created an API that translates speach into yoda speach.  Notice we don’t have a frontend, next tutorial anyone?&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 26 Apr 2014 13:38:21 -0600</pubDate>
+        <link>http://alexcampbell.co/jekyll/update/2014/04/26/Introduction-to_APIs/</link>
+        <guid isPermaLink="true">http://alexcampbell.co/jekyll/update/2014/04/26/Introduction-to_APIs/</guid>
         
         
         <category>jekyll</category>
