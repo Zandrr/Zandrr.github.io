@@ -71,11 +71,13 @@ For this application we'll be using ***Node.js and Express.js.***  Not because i
 **Express.js** is a package that makes using node.js easier.
 
 ---
+
 #Part 1: Creating our own API
 
 In this part, we're going to create our own server.  We're going to create our own server that is an API that someone else could use.  It's not going to do much, but damnit, it's an API nonetheless.
 
 ##Server.js, our first file
+
 ####Libraries:
 
 
@@ -92,6 +94,7 @@ var express     = require('express'),
     http        = require('http'),
     body_parser = require('body-parser');
 ```
+
 Okay so this first few lines we're just including the libraries we need in order to run our application. 
 
   1. We include express so that we we can use all of the functions that the framework includes.
@@ -104,7 +107,7 @@ Okay so this first few lines we're just including the libraries we need in order
 
 ####The basics, setting up our express app:
 
- ```javascript
+```javascript
 //server.js
 
 
@@ -123,7 +126,7 @@ app.use(body_parser.urlencoded({ extended: true }));
 // Set our port
 app.set('port',3000);
 
- ```
+```
 
  The first thing we did was create a variable called app that is equal to express.  This means that we now have an application that can utulize the express framework.
 
@@ -133,6 +136,7 @@ app.set('port',3000);
 
 -
 #####tl;dr:
+
 >**Create our app using express, use body parser to allow POST requests, and set the application's port to 3000 so we can access 
 it at http://localhost:3000.**
 
@@ -174,6 +178,7 @@ server.listen(app.get('port'), function(){
 
 
 #####tl;dr:
+
 >**Create a server called 'server' that uses http to create a server using the options we set on our app**
 
 ---
@@ -185,6 +190,7 @@ server.listen(app.get('port'), function(){
 
 
 #####tl;dr:
+
 >**"Hey server, listen on port 3000 (app.get('port'), and when you're done with that print out that you're listening".**
 
 ---
@@ -203,6 +209,7 @@ server.listen(app.get('port'), function(){
 
 
 #####tl;dr:
+
 >**The libraries are not installed in your app.  We need to add a package.json file.**
 
 ---
@@ -229,6 +236,7 @@ Woohoo we installed stuff.  Well done.
 
 
 #####tl;dr:
+
 >**Add meta-data and dependencies to the file.  We don't need HTTP because it's included in node.js**
 
 ---
@@ -245,6 +253,7 @@ Cannot GET / ? What the hell man, I thought it would work.  Well it is working, 
 
 
 #####tl;dr:
+
 >**The server is running, but we haven't written any routes yet.**
 
 ---
@@ -297,6 +306,7 @@ If you haven't already, go to http://localhost:3000/ and bask in your glory.
 
 
 #####tl;dr:
+
 >**Add the root route ('/') and when someone accesses that URL send back a string.**
 
 ---
