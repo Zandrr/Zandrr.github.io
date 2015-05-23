@@ -122,24 +122,26 @@
 <p><strong>Express.js</strong> is a package that makes using node.js easier.</p>
 
 <hr />
-<p>#Part 1: Creating our own API</p>
+
+<h2 id="part-1-creating-our-own-api">Part 1: Creating our own API</h2>
 
 <p>In this part, we’re going to create our own server.  We’re going to create our own server that is an API that someone else could use.  It’s not going to do much, but damnit, it’s an API nonetheless.</p>
 
-<h2 id="serverjs-our-first-file">Server.js, our first file</h2>
-<p>####Libraries:</p>
+<h3 id="serverjs-our-first-file">Server.js, our first file</h3>
+
+<h4 id="libraries">Libraries:</h4>
 
 <p>Let’s create our barebones server. Create a file called server.js:</p>
 
-<p>```javascript
-//server.js</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//server.js</span>
 
-<p>// Include the packages we need
-var express     = require(‘express’),
-    http        = require(‘http’),
-    body_parser = require(‘body-parser’);
-```
-Okay so this first few lines we’re just including the libraries we need in order to run our application. </p>
+
+<span class="c1">// Include the packages we need</span>
+<span class="kd">var</span> <span class="nx">express</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">),</span>
+    <span class="nx">http</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">),</span>
+    <span class="nx">body_parser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">);</span></code></pre></div>
+
+<p>Okay so this first few lines we’re just including the libraries we need in order to run our application. </p>
 
 <ol>
   <li>
@@ -157,24 +159,23 @@ Okay so this first few lines we’re just including the libraries we need in ord
 
 <h4 id="the-basics-setting-up-our-express-app">The basics, setting up our express app:</h4>
 
-<p>```javascript
-//server.js</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//server.js</span>
 
-<p>// Include the packages we need
-var express     = require(‘express’),
-    http        = require(‘http’),
-    body_parser = require(‘body-parser’);</p>
 
-<p>var app = express(); // Create our app using express</p>
+<span class="c1">// Include the packages we need</span>
+<span class="kd">var</span> <span class="nx">express</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">),</span>
+    <span class="nx">http</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">),</span>
+    <span class="nx">body_parser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">);</span>
 
-<p>//Create our app using body parser
-// This will allow us to get data from a POST
-app.use(body_parser.urlencoded({ extended: true })); </p>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span> <span class="c1">// Create our app using express</span>
 
-<p>// Set our port
-app.set(‘port’,3000);</p>
 
-<p>```</p>
+<span class="c1">//Create our app using body parser</span>
+<span class="c1">// This will allow us to get data from a POST</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">body_parser</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span> <span class="nx">extended</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}));</span> 
+
+<span class="c1">// Set our port</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">,</span><span class="mi">3000</span><span class="p">);</span></code></pre></div>
 
 <p>The first thing we did was create a variable called app that is equal to express.  This means that we now have an application that can utulize the express framework.</p>
 
@@ -182,44 +183,50 @@ app.set(‘port’,3000);</p>
 
 <p>Finally we set ‘port’ to be equal to 3000 for our application.  This means that when we run our server it will be available at http://localhost:3000.  Localhost is just your computer, so for now only you will be able to see it!</p>
 
-<p>-
-#####tl;dr:
-&gt;<strong>Create our app using express, use body parser to allow POST requests, and set the application’s port to 3000 so we can access 
+<hr />
+
+<h5 id="tldr-2">tl;dr:</h5>
+
+<blockquote>
+  <p><strong>Create our app using express, use body parser to allow POST requests, and set the application’s port to 3000 so we can access 
 it at http://localhost:3000.</strong></p>
+</blockquote>
 
 <hr />
 
 <h4 id="lets-create-our-basic-server">Let’s create our basic server:</h4>
 
-<p>```javascript
-//server.js</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//server.js</span>
 
-<p>// Include the packages we need
-var express     = require(‘express’),
-    http        = require(‘http’),
-    body_parser = require(‘body-parser’);</p>
 
-<p>var app = express(); // Create our app using express</p>
+<span class="c1">// Include the packages we need</span>
+<span class="kd">var</span> <span class="nx">express</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">),</span>
+    <span class="nx">http</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">),</span>
+    <span class="nx">body_parser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">);</span>
 
-<p>//Create our app using body parser
-// This will allow us to get data from a POST
-app.use(body_parser.urlencoded({ extended: true })); </p>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span> <span class="c1">// Create our app using express</span>
 
-<p>// Set our port
-app.set(‘port’, 3000);</p>
 
-<p>// Create our server using the app
-var server = http.createServer(app);</p>
+<span class="c1">//Create our app using body parser</span>
+<span class="c1">// This will allow us to get data from a POST</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">body_parser</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span> <span class="nx">extended</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}));</span> 
 
-<p>// Our server will listen on port 3000 and log out when it works!
-server.listen(app.get(‘port’), function(){
-  console.log(“Listening on port “+ app.get(‘port’));
-})
- ```</p>
+<span class="c1">// Set our port</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">,</span> <span class="mi">3000</span><span class="p">);</span>
+
+<span class="c1">// Create our server using the app</span>
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+
+
+<span class="c1">// Our server will listen on port 3000 and log out when it works!</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">),</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Listening on port &quot;</span><span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">));</span>
+<span class="p">})</span></code></pre></div>
 
 <p>We create a variable called server that is an http server using our express <em>app</em> that we just created.  Finally we tell our server to <em>listen</em> on the port we just created, 3000.  We then tell it to print out “Listening on port <our port="">".  Simple enough, right?</our></p>
 
-<h5 id="tldr-2">tl;dr:</h5>
+<h5 id="tldr-3">tl;dr:</h5>
+
 <blockquote>
   <p><strong>Create a server called ‘server’ that uses http to create a server using the options we set on our app</strong></p>
 </blockquote>
@@ -230,7 +237,8 @@ server.listen(app.get(‘port’), function(){
 
 <p>Although let’s back up a second.  Do you see how when we created the server we had this funky function as our second parameter?  This is called a callback function.  All that this is saying is the following:  “Hey server, listen on port 3000 (app.get(‘port’), and when you’re done with that print out that you’re listening”.  We’ll see a few more callback functions when we get into routes, but for now just think of it as the thing that gets done after the first function finishes.</p>
 
-<h5 id="tldr-3">tl;dr:</h5>
+<h5 id="tldr-4">tl;dr:</h5>
+
 <blockquote>
   <p><strong>“Hey server, listen on port 3000 (app.get(‘port’), and when you’re done with that print out that you’re listening”.</strong></p>
 </blockquote>
@@ -246,26 +254,26 @@ server.listen(app.get(‘port’), function(){
 
 <p>Yes your app sees it, but the computer you’re running on doesn’t have it installed.  More specifically, the directory you’re in (where your app lives) doesn’t have it installed.  We could manually install all of the dependencies, but we’re developers, we don’t like to do things twice.  Let’s create a package.json file.  We can think of this file as the instruction manual for our application.  It tells it what it needs to install to run.</p>
 
-<h5 id="tldr-4">tl;dr:</h5>
+<h5 id="tldr-5">tl;dr:</h5>
+
 <blockquote>
   <p><strong>The libraries are not installed in your app.  We need to add a package.json file.</strong></p>
 </blockquote>
 
 <hr />
-<p><em>package.json</em>
- ```json
- {
-  “name”: “MyFirstAPI”,
-  “version”: “0.0.1”,
-  “main”: “server.js”,
-  “author”:”Alex Campbell”,</p>
+<p><em>package.json</em></p>
 
-<p>“dependencies”:{
-    “express”: “^4.7.4”,
-    “body-parser”: “~1.5.2”
-    }
-}
-```</p>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MyFirstAPI&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;main&quot;</span><span class="p">:</span> <span class="s2">&quot;server.js&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="s2">&quot;Alex Campbell&quot;</span><span class="p">,</span>
+
+  <span class="nt">&quot;dependencies&quot;</span><span class="p">:{</span>
+    <span class="nt">&quot;express&quot;</span><span class="p">:</span> <span class="s2">&quot;^4.7.4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;body-parser&quot;</span><span class="p">:</span> <span class="s2">&quot;~1.5.2&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 
 <p>Create this file in the same directory as your <em>server.js</em> file.  Notice I added a few things here.  The name of my application, the version, where our main file is, and who wrote it.  This stuff is just to keep track of data associated with the application.  The interesting stuff is below in dependencies.  We include express and body-parser, good!  Although we notice that http is not there.  This is because it is built in to node.js.  So when we install node.js, we install http!</p>
 
@@ -273,7 +281,8 @@ server.listen(app.get(‘port’), function(){
 
 <p>Woohoo we installed stuff.  Well done.</p>
 
-<h5 id="tldr-5">tl;dr:</h5>
+<h5 id="tldr-6">tl;dr:</h5>
+
 <blockquote>
   <p><strong>Add meta-data and dependencies to the file.  We don’t need HTTP because it’s included in node.js</strong></p>
 </blockquote>
@@ -288,7 +297,8 @@ Quick, go to your browser and put http://localhost:3000 into the url bar.</p>
 
 <p>Cannot GET / ? What the hell man, I thought it would work.  Well it is working, you created a server.  Although the server doesn’t know what to do at the URL http://localhost:3000/.  If you go to http://localhost:3000/test you’ll get a similar error.  This is where routing comes into play, which is the next part of our tutorial.</p>
 
-<h5 id="tldr-6">tl;dr:</h5>
+<h5 id="tldr-7">tl;dr:</h5>
+
 <blockquote>
   <p><strong>The server is running, but we haven’t written any routes yet.</strong></p>
 </blockquote>
@@ -299,35 +309,37 @@ Quick, go to your browser and put http://localhost:3000 into the url bar.</p>
 
 <p>You guys are gunna’ be impressed how easy it is to create an API.  Let’s add 3 lines of code:</p>
 
-<p>```javascript
-//server.js</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//server.js</span>
 
-<p>// Include the packages we need
-var express     = require(‘express’),
-    http        = require(‘http’),
-    body_parser = require(‘body-parser’);</p>
 
-<p>var app = express(); // Create our app using express</p>
+<span class="c1">// Include the packages we need</span>
+<span class="kd">var</span> <span class="nx">express</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">),</span>
+    <span class="nx">http</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">),</span>
+    <span class="nx">body_parser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">);</span>
 
-<p>//Create our app using body parser
-// This will allow us to get data from a POST
-app.use(body_parser.urlencoded({ extended: true })); </p>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span> <span class="c1">// Create our app using express</span>
 
-<p>// Set our port
-app.set(‘port’, 3000);</p>
 
-<p>// Create our server using the app
-var server = http.createServer(app);</p>
+<span class="c1">//Create our app using body parser</span>
+<span class="c1">// This will allow us to get data from a POST</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">body_parser</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span> <span class="nx">extended</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}));</span> 
 
-<p>// Our server will listen on port 3000 and log out when it works!
-server.listen(app.get(‘port’), function(){
-  console.log(“Listening on port “+ app.get(‘port’));
-})</p>
+<span class="c1">// Set our port</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">,</span> <span class="mi">3000</span><span class="p">);</span>
 
-<p>app.get(‘/’, function(request,response){
-    response.send(“I just created an API, I am a god.”);
-  });
-```</p>
+<span class="c1">// Create our server using the app</span>
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+
+
+<span class="c1">// Our server will listen on port 3000 and log out when it works!</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">),</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Listening on port &quot;</span><span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">));</span>
+<span class="p">})</span>
+
+
+  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">){</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;I just created an API, I am a god.&quot;</span><span class="p">);</span>
+  <span class="p">});</span></code></pre></div>
 
 <p>Woah don’t get too hasty, let’s understand what’s going on here.  We’re telling our app the following: “When someone hits the url http://localhost:3000/, send the string over”.</p>
 
@@ -335,7 +347,8 @@ server.listen(app.get(‘port’), function(){
 
 <p>If you haven’t already, go to http://localhost:3000/ and bask in your glory.</p>
 
-<h5 id="tldr-7">tl;dr:</h5>
+<h5 id="tldr-8">tl;dr:</h5>
+
 <blockquote>
   <p><strong>Add the root route (‘/’) and when someone accesses that URL send back a string.</strong></p>
 </blockquote>
@@ -349,75 +362,72 @@ server.listen(app.get(‘port’), function(){
 
 <p>Alright let’s make it do something cool.  Let’s use an API to translate anything we say into yoda speak. I’m about to hit y’all with a lot of unfamiliar code, don’t freak out:</p>
 
-<p>```javascript
-//server.js</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//server.js</span>
 
-<p>// Include the packages we need
-var express     = require(‘express’),
-    http        = require(‘http’),
-    body_parser = require(‘body-parser’),
-    request     = require(‘request’);</p>
 
-<p>var app = express(); // Create our app using express</p>
+<span class="c1">// Include the packages we need</span>
+<span class="kd">var</span> <span class="nx">express</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">),</span>
+    <span class="nx">http</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">),</span>
+    <span class="nx">body_parser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">),</span>
+    <span class="nx">request</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">);</span>
 
-<p>//Create our app using body parser
-// This will allow us to get data from a POST
-app.use(body_parser.urlencoded({ extended: true })); </p>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span> <span class="c1">// Create our app using express</span>
 
-<p>// Set our port
-app.set(‘port’, 3000);</p>
 
-<p>// Create our server using the app
-var server = http.createServer(app);</p>
+<span class="c1">//Create our app using body parser</span>
+<span class="c1">// This will allow us to get data from a POST</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">body_parser</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span> <span class="nx">extended</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}));</span> 
 
-<p>// Our server will listen on port 3000 and log out when it works!
-server.listen(app.get(‘port’), function(){
-  console.log(“Listening on port “+ app.get(‘port’));
-})</p>
+<span class="c1">// Set our port</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">,</span> <span class="mi">3000</span><span class="p">);</span>
 
-<p>// When we hit http://localhost:3000/ send over this string.
-  app.get(‘/’, function(req,res){
-    res.send(“I just created an API, I am a god.”);
-  });</p>
+<span class="c1">// Create our server using the app</span>
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
 
-<p>// When we hit “http://localhost:3000/translate?sentence= some sentence” it will translate our string into yoda speak!
-  app.get(‘/translate’, function(req,res){
-    request({
-      url: “https://yoda.p.mashape.com/yoda”,
-      qs: {sentence: req.query.sentence},
-      headers: {
-        “X-Mashape-Key”:”W0XfNKn3JJmsh0Pq0bsfmunVYrOvp1BSVkLjsn6IP3xd0N2ChB”,
-        “Accept”: “text/plain”
-      },
-    },
-      function(err,response,body){
-        if(!err){
-          res.send(body);
-        }
-      });
-  });</p>
 
-<p>```</p>
+<span class="c1">// Our server will listen on port 3000 and log out when it works!</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">),</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Listening on port &quot;</span><span class="o">+</span> <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">));</span>
+<span class="p">})</span>
+
+  <span class="c1">// When we hit http://localhost:3000/ send over this string.</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;I just created an API, I am a god.&quot;</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="c1">// When we hit &quot;http://localhost:3000/translate?sentence= some sentence&quot; it will translate our string into yoda speak!</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/translate&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+    <span class="nx">request</span><span class="p">({</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;https://yoda.p.mashape.com/yoda&quot;</span><span class="p">,</span>
+      <span class="nx">qs</span><span class="o">:</span> <span class="p">{</span><span class="nx">sentence</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">sentence</span><span class="p">},</span>
+      <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;X-Mashape-Key&quot;</span><span class="o">:</span><span class="s2">&quot;W0XfNKn3JJmsh0Pq0bsfmunVYrOvp1BSVkLjsn6IP3xd0N2ChB&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Accept&quot;</span><span class="o">:</span> <span class="s2">&quot;text/plain&quot;</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+      <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">response</span><span class="p">,</span><span class="nx">body</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
+          <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+  <span class="p">});</span></code></pre></div>
 
 <p><strong>Use the request library to hit third party APIs</strong></p>
 
 <p>First things first, we’re using a new library called <em>Request</em> which allows us to easily hit third party APIs.  So let’s add it to our package.json: <em>request”: “~2.37.0”</em> in the dependencies section.  Your package.json should now look like this:</p>
 
-<p>```json
-{
-  “name”: “MyFirstAPI”,
-  “version”: “0.0.1”,
-  “main”: “server/server.js”,
-  “author”:”Alex Campbell”,</p>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MyFirstAPI&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;main&quot;</span><span class="p">:</span> <span class="s2">&quot;server/server.js&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="s2">&quot;Alex Campbell&quot;</span><span class="p">,</span>
 
-<p>“dependencies”:{
-    “express”: “^4.7.4”,
-    “body-parser”: “~1.5.2”,
-    “request”: “~2.37.0”
-    }
-}</p>
-
-<p>```</p>
+  <span class="nt">&quot;dependencies&quot;</span><span class="p">:{</span>
+    <span class="nt">&quot;express&quot;</span><span class="p">:</span> <span class="s2">&quot;^4.7.4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;body-parser&quot;</span><span class="p">:</span> <span class="s2">&quot;~1.5.2&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;~2.37.0&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 
 <p>Let’s run npm install again to update our libraries.</p>
 
@@ -433,13 +443,11 @@ server.listen(app.get(‘port’), function(){
   <p><em>Note:  The “%20” is just a space, so go ahead and use spaces in the URL bar if you want!</em></p>
 </blockquote>
 
-<p><code>json
-qs: {"sentence": req.query.sentence}
-</code>
-TO
-<code>json
-qs: {"thing": req.query.thing}
-</code></p>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">qs:</span> <span class="p">{</span><span class="nt">&quot;sentence&quot;</span><span class="p">:</span> <span class="err">req.query.sentence</span><span class="p">}</span></code></pre></div>
+
+<p>TO</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">qs</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;thing&quot;</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">thing</span><span class="p">}</span></code></pre></div>
 
 <p>then we would make our request like this: “https://yoda.p.mashape.com/yoda?<em>thing</em>=I%20love%20lumpy%20space”.</p>
 

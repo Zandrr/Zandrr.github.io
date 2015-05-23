@@ -72,18 +72,20 @@ For this application we'll be using ***Node.js and Express.js.***  Not because i
 
 ---
 
-#Part 1: Creating our own API
+
+##Part 1: Creating our own API
+
 
 In this part, we're going to create our own server.  We're going to create our own server that is an API that someone else could use.  It's not going to do much, but damnit, it's an API nonetheless.
 
-##Server.js, our first file
+###Server.js, our first file
 
 ####Libraries:
 
 
 Let's create our barebones server. Create a file called server.js:
 
-```javascript
+{% highlight javascript %}
 
 
 //server.js
@@ -93,7 +95,7 @@ Let's create our barebones server. Create a file called server.js:
 var express     = require('express'),
     http        = require('http'),
     body_parser = require('body-parser');
-```
+{% endhighlight %}
 
 Okay so this first few lines we're just including the libraries we need in order to run our application. 
 
@@ -107,7 +109,8 @@ Okay so this first few lines we're just including the libraries we need in order
 
 ####The basics, setting up our express app:
 
-```javascript
+{% highlight javascript %}
+
 //server.js
 
 
@@ -126,7 +129,7 @@ app.use(body_parser.urlencoded({ extended: true }));
 // Set our port
 app.set('port',3000);
 
-```
+{% endhighlight %}
 
  The first thing we did was create a variable called app that is equal to express.  This means that we now have an application that can utulize the express framework.
 
@@ -134,7 +137,8 @@ app.set('port',3000);
 
  Finally we set 'port' to be equal to 3000 for our application.  This means that when we run our server it will be available at http://localhost:3000.  Localhost is just your computer, so for now only you will be able to see it!
 
--
+---
+
 #####tl;dr:
 
 >**Create our app using express, use body parser to allow POST requests, and set the application's port to 3000 so we can access 
@@ -144,7 +148,8 @@ it at http://localhost:3000.**
 
 ####Let's create our basic server:
 
- ```javascript
+{% highlight javascript %}
+
 //server.js
 
 
@@ -171,7 +176,7 @@ var server = http.createServer(app);
 server.listen(app.get('port'), function(){
   console.log("Listening on port "+ app.get('port'));
 })
- ```
+{% endhighlight %}
 
 
  We create a variable called server that is an http server using our express *app* that we just created.  Finally we tell our server to *listen* on the port we just created, 3000.  We then tell it to print out "Listening on port <our port>".  Simple enough, right?
@@ -214,7 +219,7 @@ server.listen(app.get('port'), function(){
 
 ---
 *package.json*
- ```json
+{% highlight json %}
  {
   "name": "MyFirstAPI",
   "version": "0.0.1",
@@ -226,7 +231,7 @@ server.listen(app.get('port'), function(){
     "body-parser": "~1.5.2"
     }
 }
-```
+{% endhighlight %}
 
 Create this file in the same directory as your *server.js* file.  Notice I added a few things here.  The name of my application, the version, where our main file is, and who wrote it.  This stuff is just to keep track of data associated with the application.  The interesting stuff is below in dependencies.  We include express and body-parser, good!  Although we notice that http is not there.  This is because it is built in to node.js.  So when we install node.js, we install http!
 
@@ -263,7 +268,8 @@ Cannot GET / ? What the hell man, I thought it would work.  Well it is working, 
 You guys are gunna' be impressed how easy it is to create an API.  Let's add 3 lines of code:
 
 
-```javascript
+{% highlight javascript %}
+
 //server.js
 
 
@@ -295,7 +301,7 @@ server.listen(app.get('port'), function(){
   app.get('/', function(request,response){
     response.send("I just created an API, I am a god.");
   });
-```
+{% endhighlight %}
 
 
 Woah don't get too hasty, let's understand what's going on here.  We're telling our app the following: "When someone hits the url http://localhost:3000/, send the string over".
@@ -319,7 +325,8 @@ In this section we are going to utulize an API that converts any string into a '
 
 Alright let's make it do something cool.  Let's use an API to translate anything we say into yoda speak. I'm about to hit y'all with a lot of unfamiliar code, don't freak out:
 
-```javascript
+{% highlight javascript %}
+
 //server.js
 
 
@@ -370,14 +377,14 @@ server.listen(app.get('port'), function(){
       });
   });
 
-```
+{% endhighlight %}
 
 **Use the request library to hit third party APIs**
 
 
 First things first, we're using a new library called *Request* which allows us to easily hit third party APIs.  So let's add it to our package.json: *request": "~2.37.0"* in the dependencies section.  Your package.json should now look like this:
 
-```json
+{% highlight json %}
 {
   "name": "MyFirstAPI",
   "version": "0.0.1",
@@ -391,7 +398,7 @@ First things first, we're using a new library called *Request* which allows us t
     }
 }
 
-```
+{% endhighlight %}
 
 Let's run npm install again to update our libraries.
 
@@ -408,13 +415,13 @@ Now let's walk through this '/translate' route step by step:
 
 >*Note:  The "%20" is just a space, so go ahead and use spaces in the URL bar if you want!*
 
-```json
+{% highlight json %}
 qs: {"sentence": req.query.sentence}
-```
+{% endhighlight %}
 TO
-```json
+{% highlight javascript %}
 qs: {"thing": req.query.thing}
-```
+{% endhighlight %}
 
 then we would make our request like this: "https://yoda.p.mashape.com/yoda?*thing*=I%20love%20lumpy%20space".
 
