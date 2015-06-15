@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Common GitHub Questions"
-date:   2014-06-10 09:25:21
+date:   2015-06-10 09:25:21
 categories: jekyll update
 ---
 
