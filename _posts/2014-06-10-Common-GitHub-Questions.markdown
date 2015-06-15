@@ -6,7 +6,6 @@ categories: jekyll update
 ---
 
 
-
 ###Overview
  Git and Github are not as mind numbing as staring at your cat while she stares at the wall, or spending an entire day counting freckles, it's a bit more complicated than that. In this post I will go over a few common questions that users run into in their quests to become non-cat-staring Git and GitHub gurus.
 
@@ -105,17 +104,17 @@ If you are working with a bunch of huge graphics files, another service might fi
 Yes that's totally possible.  We could simply revert the merged pull request from history.
 
 1. Here we have three pull requests, and we want to delete *SECOND PULL REQUEST*
-![image of first revert](../images/revert1.png)
+![image of first revert](http://alexcampbell.co/images/revert1.png)
 
 
 2. First we would navigate to our closed pull requests.  As you can see, there are three closed pull requests.  Let's click on the pull request we want to remove, *SECOND PULL REQUEST*
-![image of second revert image](../images/revert2.png)
+![image of second revert image](http://alexcampbell.co/images/revert2.png)
 
 3. We would then click the *Revert* button that has a red box around it.
-![image of third revert image](../images/revert3.png)
+![image of third revert image](http://alexcampbell.co/images/revert3.png)
 
 4. We would create a new pull request to remove our *SECOND PULL REQUEST*.
-![image of fourth revert image](../images/revert4.png)
+![image of fourth revert image](http://alexcampbell.co/images/revert4.png)
 
 
 Once we merge this pull request in, it's as if the *SECOND PULL REQUEST* never existed.  Problem solved! :+1:
