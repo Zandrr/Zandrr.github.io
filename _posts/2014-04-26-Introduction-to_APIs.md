@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introduction to APIs"
-date:   2014-04-26 19:38:21
+date:   2015-04-26 19:38:21
 categories: jekyll update
 ---
 
@@ -19,7 +19,7 @@ My aim in this tutorial is to teach people with some technical experience how to
 1) node installed
 
 
-2) running on linux or mac.  If you're running windows you're probably doing it wrong.
+2) running on linux or mac.  Let's be real people, if we're not playing games, we don't need Windows.
 
 
 3) some knowledge of javascript
