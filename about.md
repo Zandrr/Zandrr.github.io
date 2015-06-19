@@ -19,7 +19,7 @@ I didn't like being told what to do or how to do something, so I did things the 
 Hub of entrepreneurial resources.  Built with Ruby on Rails.
 
 
-![source](https://github.com/Zandrr/BoulderStart)
+[source](https://github.com/Zandrr/BoulderStart)
 
 
 ###[Twitter Sentiment](http://54.149.243.161:49152)
@@ -28,7 +28,7 @@ Hub of entrepreneurial resources.  Built with Ruby on Rails.
 Real time twitter sentiment analysis.  Built with nodejs, angular.js.
 
 
-![source](https://github.com/CUBigDataClass/tweetstream)
+[source](https://github.com/CUBigDataClass/tweetstream)
 
 
 ###[HackCU](http://hackcu.org)
@@ -37,7 +37,7 @@ Real time twitter sentiment analysis.  Built with nodejs, angular.js.
 The website isn't the cool part, the event is.  I co-founded it, and built the first website iteration.
 
 
-![source](https://github.com/Zandrr/HackCU)
+[source](https://github.com/Zandrr/HackCU)
 
 ###[noSQL-esque encrypted data store ](https://github.com/Zandrr/phonebook.js)
 
@@ -49,4 +49,4 @@ Relies on peer-to-peer networking and volunteer contributions in the form of vir
 
 Suggest-o-matic spotify song generator.  Smarter than Pandora.  Built with node.js, angular.js
 
-![source](https://github.com/Zandrr/spotifyApp)
+[source](https://github.com/Zandrr/spotifyApp)
