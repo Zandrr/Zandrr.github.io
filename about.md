@@ -3,23 +3,50 @@ layout: page
 title: About
 permalink: /about/
 ---
+### Where I talk about me.
+
+*I'm a computer science and business student. I want to use my skill set to build something truly amazing with truly amazing people.*
 
 
-##**"** *To be a warrior is not a simple matter of wishing to be one. It is rather an endless struggle that will go on to the very last moment of our lives. Nobody is born a warrior, in exactly the same way that nobody is born an average man. We make ourselves into one or the other.* **"**
+I went to the principals office more often than not when I was in middle school.
+I didn't like being told what to do or how to do something, so I did things the way I wanted to.  It got me into some trouble, but I couldn't stand being told how to do something. I want to build value into people's lives and following a strict set of rules won't get me very far. 
 
-###**-Natsume Soseki**
+##Projects
 
----
-
-
-## Where I talk about me.
-
-###*I'm a computer science and business student. I want to use my skill set to build something truly amazing with truly amazing people.*
+###![Boulderstarups](http://boulderstartups.org)
 
 
-####I went to the principals office more often than not when I was in middle school.
-I didn't like being told what to do or how to do something, so I did things the way I wanted to.  It got me into some trouble, but I couldn't stand being told that there's one way to do something. I want to build value into people's lives and following a strict set of rules doesn't get you very far. 
+Hub of entrepreneurial resources.  Built with Ruby on Rails.
 
 
-####Outside of coding and startups...
-I love improv comedy.  Come see one of our shows!
+![source](https://github.com/Zandrr/BoulderStart)
+
+
+### ![Twitter Sentiment](http://54.149.243.161:49152)
+
+
+Real time twitter sentiment analysis.  Built with nodejs, angular.js.
+
+
+![source](https://github.com/CUBigDataClass/tweetstream)
+
+
+###[HackCU](http://hackcu.org)
+
+
+The website isn't the cool part, the event is.  I co-founded it, and built the first website iteration.
+
+
+![source](https://github.com/Zandrr/HackCU)
+
+###![noSQL-esque encrypted data store ](https://github.com/Zandrr/phonebook.js)
+
+
+Relies on peer-to-peer networking and volunteer contributions in the form of virtual private storage space.
+
+
+###![Spotify-song-suggest-o-matic](https://spotifysongs.herokuapp.com/)
+
+Suggest-o-matic spotify song generator.  Smarter than Pandora.  Built with node.js, angular.js
+
+![source](https://github.com/Zandrr/spotifyApp)
