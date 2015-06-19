@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Getting Started with GlusterFS"
-date:   2015-06-15 19:38:21
+date:   2015-06-19 19:38:21
 categories: jekyll update
 ---
 
@@ -21,7 +21,7 @@ I have recently set out on a journey to become more well versed in open source s
 
 ###What is GlusterFS?
 
-> "GlusterFS is a scalable network filesystem suitable for data-intensive tasks such as cloud storage and media streaming. GlusterFS is free and open source software and can utilize common off-the-shelf hardware."
+"GlusterFS is a scalable network filesystem suitable for data-intensive tasks such as cloud storage and media streaming. GlusterFS is free and open source software and can utilize common off-the-shelf hardware."
 
 Let's break that down a bit.  
 - GlusterFS is a network filesystem
@@ -107,25 +107,27 @@ you may need to reboot your virtual machines now.
 Note:  Once we probe from say Server1 to Server0 (```gluster peer probe Server0```) both Servers are in our trusted pool.
 
 ---
+
+
 ##Part 2: Creating the Bricks and Volumes
 Now that we have our trusted pool, we can begin using gluster's bricks and volumes.  A brick is essentially a single filesystem.  A volume is a collection of filesystems that we will mount onto our client.  This will give our client the illusion that we are accessing one filesystem, when in reality we are accessing data from many remote filesytems.  Gluster magic!
 
 ####Step 1 - Create the Bricks)
 
 **1a)** We need to create a new disk device to mount our new brick filesystem on within our virtual machines.
->Check out your ```/dev``` folder.  There you should see a few virtual disk devices such as ```/dev/vda``` or ```/dev/vda1```
+Check out your ```/dev``` folder.  There you should see a few virtual disk devices such as ```/dev/vda``` or ```/dev/vda1```
 ![vda](http://alexcampbell.co/images/dev_vda.png)
 
 
->Okay so our goal here is to create another vitual disk device.  Go ahead and add some hardware
+Okay so our goal here is to create another vitual disk device.  Go ahead and add some hardware
 ![add hardware](http://alexcampbell.co/images/add_hardware.png)
 
 
->Make sure bus type  is VirtIO
+Make sure bus type  is VirtIO
 ![VirtIO](http://alexcampbell.co/images/virtIO.png)
 
 
->Once its created check back in your /dev folder.
+Once its created check back in your /dev folder.
 ![dev_vdb](http://alexcampbell.co/images/dev_vdb.png)
 
 Notice the new virtual device named vdb.  This device is completely empty, it doesn't even have a filesystem on it. 
@@ -147,7 +149,8 @@ This is saying "make a xfs filesystem with a size of 512 at /dev/vdb".  You shou
 ``` mkdir -p /data/brick2 ``` ON VIRTUAL MACHINE 2
 
 
-**1d)** Edit our /etc/fstab file so that our new filesystem is mounted at /data/brick<number> everytime the computer boots.
+**1d)** 
+Edit our /etc/fstab file so that our new filesystem is mounted at /data/brick<number> everytime the computer boots.
 
 
 Add the following to your /etc/fstab file respectively for each virtual machine
@@ -207,8 +210,8 @@ We're almost done.  Let's mount our volume on the client.
 
 Bam we did it.  You should be able to do this now:
 
-![Volume GIF](http://alexcampbell.co/images/volume_demo.gif)
 
+<img src="http://alexcampbell.co/images/volume_demo.gif" alt="volume gif" style="width:1000px;height:500pxpx">
 
 ---
 
