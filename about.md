@@ -13,6 +13,15 @@ I didn't like being told what to do or how to do something, so I did things the 
 
 ##Projects
 
+###[SproutGuild](http://sproutguild.com)
+
+
+All the best natural products, in your inbox, daily.  Built using meteor.js.
+
+
+[source](https://github.com/sproutguild/SproutGuild)
+
+
 ###[Boulderstarups](http://boulderstartups.org)
 
 
@@ -50,3 +59,8 @@ Relies on peer-to-peer networking and volunteer contributions in the form of vir
 Suggest-o-matic spotify song generator.  Smarter than Pandora.  Built with node.js, angular.js
 
 [source](https://github.com/Zandrr/spotifyApp)
+
+
+###[CU Ratings](https://github.com/Zandrr/CUratings)
+
+Ah my first project ever.  This was the first time I have ever used PHP, MySQL, HTML/CSS.
