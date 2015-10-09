@@ -18,7 +18,7 @@ Last week I gave a presentation to my class of ~50 people.  It wasn’t so bad. 
 I thought back to my first pitch ever, and how terribly I did, but more importantly, *how much I learned.*  So I thought to myself again, what could I never imagine myself doing?  The answer was teaching a class to over *three-hundred* people. Three days from now.
 
 
-###My friend said I was visibally uneasy.
+###My friend said I was visibly uneasy.
 
 
  I felt horrible before the class.  I was doubting myself, thoughts of canceling were creeping into my head.  I didn't know it at the time, but it was exactly what I wanted.
