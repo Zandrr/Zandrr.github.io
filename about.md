@@ -7,7 +7,7 @@ permalink: /about/
 
 *I'm a computer science and business student. I want to use my skill set to build something truly amazing with truly amazing people.*
 
-Let's get a beer.  I like beer.
+Let's get a beer.  I like beer. Seriously shoot me an email, let's talk about life.
 
 
 
