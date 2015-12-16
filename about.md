@@ -7,11 +7,17 @@ permalink: /about/
 
 *I'm a computer science and business student. I want to use my skill set to build something truly amazing with truly amazing people.*
 
+Let's get a beer.  I like beer.
 
-I went to the principals office more often than not when I was in middle school.
-I didn't like being told what to do or how to do something, so I did things the way I wanted to.  It got me into some trouble, but I couldn't stand being told how to do something. I want to build value into people's lives and following a strict set of rules won't get me very far. 
 
-##Projects
+
+##Projects - Code Stuff
+
+
+###[Tandem](http://betandem.com/)
+
+At Tandem, we're unleashing the power of mentorship by enabling mentors and mentees to connect in more meaningful ways in their micro network.
+
 
 ###[SproutGuild](http://sproutguild.com)
 
@@ -20,6 +26,12 @@ All the best natural products, in your inbox, daily.  Built using meteor.js.
 
 
 [source](https://github.com/sproutguild/SproutGuild)
+
+
+###[FoxyLib](http://foxylib.co/)
+
+You and your company spend more time than necessary downloading software. Allow Foxy Lib to do the heavy lifting for you. 
+
 
 
 ###[Boulderstarups](http://boulderstartups.org)
@@ -48,6 +60,7 @@ The website isn't the cool part, the event is.  I co-founded it, and built the f
 
 [source](https://github.com/Zandrr/HackCU)
 
+
 ###[noSQL-esque encrypted data store ](https://github.com/Zandrr/phonebook.js)
 
 
@@ -64,3 +77,10 @@ Suggest-o-matic spotify song generator.  Smarter than Pandora.  Built with node.
 ###[CU Ratings](https://github.com/Zandrr/CUratings)
 
 Ah my first project ever.  This was the first time I have ever used PHP, MySQL, HTML/CSS.
+
+
+## Projects - Not Code Stuff
+
+### [Mailroom](https://www.youtube.com/watch?v=60lAmF7kcY0&app=desktop)
+
+I was recently an actor in a friend's Amelie-like film.  It was awesome.
