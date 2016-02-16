@@ -83,7 +83,7 @@ In this part, we're going to create our own server.  We're going to create our o
 ####Libraries:
 
 
-Let's create our barebones server. Create a file called server.js:
+Let's create our bare-bones server. Create a file called server.js:
 
 {% highlight javascript %}
 
@@ -131,7 +131,7 @@ app.set('port',3000);
 
 {% endhighlight %}
 
- The first thing we did was create a variable called app that is equal to express.  This means that we now have an application that can utulize the express framework.
+ The first thing we did was create a variable called app that is equal to express.  This means that we now have an application that can utilize the express framework.
 
  Next we tell our app to *use* body_parser.  Don't worry about the details for now, just know that it allows us to do POST requests.
 
@@ -319,7 +319,7 @@ If you haven't already, go to http://localhost:3000/ and bask in your glory.
 
 
 #Part 2: Using someone else's API:
-In this section we are going to utulize an API that converts any string into a 'yoda string'.  It will take a string and return how yoda might say it.  Or, Take a string and return how yoda might say it, it will.  Yes, hmmm.  Let's do eet!
+In this section we are going to utilize an API that converts any string into a 'yoda string'.  It will take a string and return how yoda might say it.  Or, Take a string and return how yoda might say it, it will.  Yes, hmmm.  Let's do eet!
 
 ###Let's hit another API!
 
@@ -426,7 +426,7 @@ qs: {"thing": req.query.thing}
 then we would make our request like this: "https://yoda.p.mashape.com/yoda?*thing*=I%20love%20lumpy%20space".
 
 
-4) req.query.sentence?  What the hell is that?  We're telling our app on request to look at the query string.  Within that querystring give us the value of *sentence*.  This is whatever you typed into your URL!
+4) req.query.sentence?  What the hell is that?  We're telling our app on request to look at the query string.  Within that query string give us the value of *sentence*.  This is whatever you typed into your URL!
 
 
 5)  Next we need to add the headers.  This is extra data associated with our request that tells it how to act, or passes along authentication information.  Since we're using mashape, their APIs expect an "X-MASHAPE-KEY", so we pass it along in the headers.  Best practice, we would not expose our API key, but for the scope of this tutorial, don't worry about it.  We also tell it to Accept text/plain.  This means that our API should only accept plain text.

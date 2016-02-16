@@ -15,13 +15,13 @@ When my team was called, I went up, spouted some bullshit, and finished with the
 <br>
 
 ###Yet the confidence surged back
-I followed up with: "Guys it's much better when I remember it."  The chuckles were  weirdly envigorating.  One of the judges said: "So, I have no idea what the hell you're doing." I responded with a flawless pitch, it was exactly what I wanted to say.  The words flowed out of me like something that flows, I don't know, a babbling brook or something. The point is I pitched it.  I pitched it well.
+I followed up with: "Guys it's much better when I remember it."  The chuckles were  weirdly invigorating.  One of the judges said: "So, I have no idea what the hell you're doing." I responded with a flawless pitch, it was exactly what I wanted to say.  The words flowed out of me like something that flows, I don't know, a babbling brook or something. The point is I pitched it.  I pitched it well.
 
 ###And I learned that I should use my fucking brain
 Instead of regurgitating a script, think. Remember a few key points, and then say what you know.  Unless you're into mindless babbling. In that case, memorize it.
 <br>
 
-###And that no matter how badly you fuck up, it's probably salvagable
+###And that no matter how badly you fuck up, it's probably salvageable
 I could have just sat down and wallowed in my own pity, but I didn't.  I stood there feeling like an idiot and fixed it.
 <br>
 <br>
