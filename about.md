@@ -5,9 +5,9 @@ permalink: /about/
 ---
 ### Where I talk about me.
 
-*I'm a computer science and business student. I want to use my skill set to build something truly amazing with truly amazing people.*
+*I'm a computer science and business person. I want to use my skill set to build something truly amazing with truly amazing people.  I'm currently a software engineer at Twitter.*
 
-Let's get a beer.  I like beer. Seriously shoot me an email, let's talk about life.
+Let's get a beer and some delicious food. Seriously shoot me an email, I'm always down to talk about life.
 
 
 
@@ -84,3 +84,8 @@ Ah my first project ever.  This was the first time I have ever used PHP, MySQL, 
 ### [Mailroom](https://www.youtube.com/watch?v=60lAmF7kcY0&app=desktop)
 
 I was recently an actor in a friend's Amelie-like film.  It was awesome.
+
+
+### [GitHub Teacher](https://www.youtube.com/watch?v=WmSYLfGIvrA&feature=youtu.be)
+
+I've been teaching an introduction to GitHub class to some peeps at my school.
