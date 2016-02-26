@@ -5,7 +5,7 @@ date:   2015-04-26 19:38:21
 categories: jekyll update
 ---
 
-###Motivation
+### Motivation
 
 When I first started to learn how to create and consume API's, I was lost.  I jumped through three to four tutorials before I had someone sit down and teach me.
 
@@ -13,7 +13,7 @@ My aim in this tutorial is to teach people with some technical experience how to
 
 ---
 
-###Prerequisites:
+### Prerequisites:
 
 
 1) node installed
@@ -26,7 +26,7 @@ My aim in this tutorial is to teach people with some technical experience how to
 
 ---
 
-###Agenda:
+### Agenda:
 
 
   What is an API?
@@ -39,28 +39,28 @@ My aim in this tutorial is to teach people with some technical experience how to
 
 ---
 
-###What is an API?
+### What is an API?
 
 API is an acronym for "application program interface".  This is just fancy talk for how two software components interact. Programmers create "building blocks", an API, to make it easier for other programmers to interact with their database or hardware. This could be how a programmer interacts with the hardware to create a nice graphical user interface.  It could be how Twitter exposes their database to make cool applications!
 
 
-#####tl;dr:
+##### tl;dr:
 >**An interface for interacting with databases or hardware**
 
 ---
 
-###What is REST?
+### What is REST?
 
 
 Representational State Transfer.  Yeah, ignore that.  REST is the most popular style of communication for web applications. It allows us to communicate via URI and HTTP (think of URI as a URL, like: http://alexcampbell.co).  That's all we need to know for now, let's jump into code!
 
 
-#####tl;dr:
+##### tl;dr:
 >**A way to communicate via URI and HTTP**
 
 ---
 
-###Our Tools
+### Our Tools
 
 For this application we'll be using ***Node.js and Express.js.***  Not because it's better than anything else, but because I'm most comfortable using it.
 
@@ -73,14 +73,14 @@ For this application we'll be using ***Node.js and Express.js.***  Not because i
 ---
 
 
-##Part 1: Creating our own API
+## Part 1: Creating our own API
 
 
 In this part, we're going to create our own server.  We're going to create our own server that is an API that someone else could use.  It's not going to do much, but damnit, it's an API nonetheless.
 
-###Server.js, our first file
+### Server.js, our first file
 
-####Libraries:
+#### Libraries:
 
 
 Let's create our bare-bones server. Create a file called server.js:
@@ -97,7 +97,7 @@ var express     = require('express'),
     body_parser = require('body-parser');
 {% endhighlight %}
 
-Okay so this first few lines we're just including the libraries we need in order to run our application. 
+Okay so this first few lines we're just including the libraries we need in order to run our application.
 
   1. We include express so that we we can use all of the functions that the framework includes.
 
@@ -107,7 +107,7 @@ Okay so this first few lines we're just including the libraries we need in order
 
  ---
 
-####The basics, setting up our express app:
+#### The basics, setting up our express app:
 
 {% highlight javascript %}
 
@@ -124,7 +124,7 @@ var app = express(); // Create our app using express
 
 //Create our app using body parser
 // This will allow us to get data from a POST
-app.use(body_parser.urlencoded({ extended: true })); 
+app.use(body_parser.urlencoded({ extended: true }));
 
 // Set our port
 app.set('port',3000);
@@ -139,14 +139,14 @@ app.set('port',3000);
 
 ---
 
-#####tl;dr:
+##### tl;dr:
 
->**Create our app using express, use body parser to allow POST requests, and set the application's port to 3000 so we can access 
+>**Create our app using express, use body parser to allow POST requests, and set the application's port to 3000 so we can access
 it at http://localhost:3000.**
 
 ---
 
-####Let's create our basic server:
+#### Let's create our basic server:
 
 {% highlight javascript %}
 
@@ -163,7 +163,7 @@ var app = express(); // Create our app using express
 
 //Create our app using body parser
 // This will allow us to get data from a POST
-app.use(body_parser.urlencoded({ extended: true })); 
+app.use(body_parser.urlencoded({ extended: true }));
 
 // Set our port
 app.set('port', 3000);
@@ -182,25 +182,25 @@ server.listen(app.get('port'), function(){
  We create a variable called server that is an http server using our express *app* that we just created.  Finally we tell our server to *listen* on the port we just created, 3000.  We then tell it to print out "Listening on port <our port>".  Simple enough, right?
 
 
-#####tl;dr:
+##### tl;dr:
 
 >**Create a server called 'server' that uses http to create a server using the options we set on our app**
 
 ---
 
-#####Callback function?
+##### Callback function?
 
 
  Although let's back up a second.  Do you see how when we created the server we had this funky function as our second parameter?  This is called a callback function.  All that this is saying is the following:  "Hey server, listen on port 3000 (app.get('port'), and when you're done with that print out that you're listening".  We'll see a few more callback functions when we get into routes, but for now just think of it as the thing that gets done after the first function finishes.
 
 
-#####tl;dr:
+##### tl;dr:
 
 >**"Hey server, listen on port 3000 (app.get('port'), and when you're done with that print out that you're listening".**
 
 ---
 
-####Try it out!
+#### Try it out!
  BOOM!  You just created a server.  Hell yeah, nice job. Let's boot it up.  Go into the directory where your server.js lives and type the command ```node server.js```.
 
 
@@ -213,7 +213,7 @@ server.listen(app.get('port'), function(){
 
 
 
-#####tl;dr:
+##### tl;dr:
 
 >**The libraries are not installed in your app.  We need to add a package.json file.**
 
@@ -240,13 +240,13 @@ Now in order to run this file just type ```npm install`` in the directory that t
 Woohoo we installed stuff.  Well done.
 
 
-#####tl;dr:
+##### tl;dr:
 
 >**Add meta-data and dependencies to the file.  We don't need HTTP because it's included in node.js**
 
 ---
 
-####Try, try again:
+#### Try, try again:
 
 
 Let's try to run our app again:  ```node server.js```
@@ -257,13 +257,13 @@ Quick, go to your browser and put http://localhost:3000 into the url bar.
 Cannot GET / ? What the hell man, I thought it would work.  Well it is working, you created a server.  Although the server doesn't know what to do at the URL http://localhost:3000/.  If you go to http://localhost:3000/test you'll get a similar error.  This is where routing comes into play, which is the next part of our tutorial.
 
 
-#####tl;dr:
+##### tl;dr:
 
 >**The server is running, but we haven't written any routes yet.**
 
 ---
 
-###Let's create some routes:
+### Let's create some routes:
 
 You guys are gunna' be impressed how easy it is to create an API.  Let's add 3 lines of code:
 
@@ -283,7 +283,7 @@ var app = express(); // Create our app using express
 
 //Create our app using body parser
 // This will allow us to get data from a POST
-app.use(body_parser.urlencoded({ extended: true })); 
+app.use(body_parser.urlencoded({ extended: true }));
 
 // Set our port
 app.set('port', 3000);
@@ -311,17 +311,17 @@ Although it's a bit more complex than that.  We see that callback thing again he
 If you haven't already, go to http://localhost:3000/ and bask in your glory.
 
 
-#####tl;dr:
+##### tl;dr:
 
 >**Add the root route ('/') and when someone accesses that URL send back a string.**
 
 ---
 
 
-#Part 2: Using someone else's API:
+# Part 2: Using someone else's API:
 In this section we are going to utilize an API that converts any string into a 'yoda string'.  It will take a string and return how yoda might say it.  Or, Take a string and return how yoda might say it, it will.  Yes, hmmm.  Let's do eet!
 
-###Let's hit another API!
+### Let's hit another API!
 
 Alright let's make it do something cool.  Let's use an API to translate anything we say into yoda speak. I'm about to hit y'all with a lot of unfamiliar code, don't freak out:
 
@@ -341,7 +341,7 @@ var app = express(); // Create our app using express
 
 //Create our app using body parser
 // This will allow us to get data from a POST
-app.use(body_parser.urlencoded({ extended: true })); 
+app.use(body_parser.urlencoded({ extended: true }));
 
 // Set our port
 app.set('port', 3000);
@@ -435,7 +435,7 @@ then we would make our request like this: "https://yoda.p.mashape.com/yoda?*thin
 6) After we've passed all this information along, we have a callback function.  So once the request is made, it will execute this function.  Similar to our "http://localhost:300/" route, we send a string across the server.  This time it's the body of the response.
 
 
-###Congrats
+### Congrats
 
 You freakin' did it.  You just created an API that translates speach into yoda speach.  Notice we don't have a frontend, next tutorial anyone?
 
