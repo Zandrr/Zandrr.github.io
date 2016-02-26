@@ -5,12 +5,12 @@ date:   2015-06-19 19:38:21
 categories: jekyll update
 ---
 
-###Motivation
+### Motivation
 I have recently set out on a journey to become more well versed in open source software.  I've been working a bit with openstack swift, swiftonfile, python-libgfapi and GlusterFS.  I've found that there are a few barriers to entry with some of this software, due to a  combination of a lack of documentation and the the constantly changing nature of opensource software. When I first set out to set up a distributed, replicated GlusterFS cluster I struggled quite a bit.  ***My goal in this post is to help people set up a fully functioning GlusterFS cluster.***
 
 ---
 
-###Pre-requisites
+### Pre-requisites
 
 - A virtualization environment, I will be using KVM.
 
@@ -19,11 +19,11 @@ I have recently set out on a journey to become more well versed in open source s
 
 
 
-###What is GlusterFS?
+### What is GlusterFS?
 
 "GlusterFS is a scalable network filesystem suitable for data-intensive tasks such as cloud storage and media streaming. GlusterFS is free and open source software and can utilize common off-the-shelf hardware."
 
-Let's break that down a bit.  
+Let's break that down a bit.
 - GlusterFS is a network filesystem
 
 A network filesystem (NFS) is a client/server application that allows many  remote or local computers filesystems to be viewed as one large file system.  The user can view, store, and update on a remote computer as if they were on their own computer.
@@ -44,7 +44,7 @@ This goes hand in hand with GlusterFS's scalability. ***FINISH ME***
 
 There is no need to buy a bunch of extremely expensive large disks.  Users can simply set up many pieces of cheap hardware, and GlusterFS will distribute the data for you.
 
-###Who uses it?
+### Who uses it?
 Ever heard of Dreamworks?  You know, the people that brought you Shrek and Kung-Fu Panda.  They run on GlusterFS for media streaming and storing entire movies.
 
 
@@ -63,11 +63,11 @@ Alrighty, on to the good stuff...
 Make sure you have KVM installed and ready to use.  I would go through this, but that's an entirely different blog post.  I'll trust you can do this.
 
 
-####Step 1 - Virtual Machines)
+#### Step 1 - Virtual Machines)
 Create 2 brand-spankin' new virtual machines running fedora 21.  We will be clustering them together as our servers, and we will use our host machine (or a third virtual machine) as the client.  I will be using [Virtual Machine Manager](https://virt-manager.org/) and vagrant. Creating virtual machines and using vagrant is not in the scope of this post, **but make sure you know your virtual machine's hostname!** We will need it later.  This can be found with ```hostname``` from inside the terminal
 
 
-####Step 2 - Installing GlusterFS)
+#### Step 2 - Installing GlusterFS)
  We need to install ```glusterfs-server``` on our server machines (our first two virtual machines).  This will allow our client to interact with our servers in the future.
 
 **2a)** Install the GlusterFS server software on your 2 new virtual machines.
@@ -82,12 +82,12 @@ make sure it's running:
 
 *Optional:*
 
-```chkconfig glusterd on``` 
+```chkconfig glusterd on```
 This will ensure that glusterd is running everytime we boot.
 
 
 
-####Step 3 - Creating a Trusted Pool)
+#### Step 3 - Creating a Trusted Pool)
 We want our servers to be able to talk to each other, so we're going to create a trusted pool.  Think of it as a cult: Only current members can recruit new members, and once your in, it is unlikely that you leave.  Welcome to the cult of Gluster.
 
 
@@ -109,10 +109,10 @@ Note:  Once we probe from say Server1 to Server0 (```gluster peer probe Server0`
 ---
 
 
-##Part 2: Creating the Bricks and Volumes
+## Part 2: Creating the Bricks and Volumes
 Now that we have our trusted pool, we can begin using gluster's bricks and volumes.  A brick is essentially a single filesystem.  A volume is a collection of filesystems that we will mount onto our client.  This will give our client the illusion that we are accessing one filesystem, when in reality we are accessing data from many remote filesytems.  Gluster magic!
 
-####Step 1 - Create the Bricks)
+#### Step 1 - Create the Bricks)
 
 **1a)** We need to create a new disk device to mount our new brick filesystem on within our virtual machines.
 Check out your ```/dev``` folder.  There you should see a few virtual disk devices such as ```/dev/vda``` or ```/dev/vda1```
@@ -130,7 +130,7 @@ Make sure bus type  is VirtIO
 Once its created check back in your /dev folder.
 ![dev_vdb](http://alexcampbell.co/images/dev_vdb.png)
 
-Notice the new virtual device named vdb.  This device is completely empty, it doesn't even have a filesystem on it. 
+Notice the new virtual device named vdb.  This device is completely empty, it doesn't even have a filesystem on it.
 
 
 **1b)**  Let's make the filesystem.  Run this on *both* virtual machines.
@@ -149,7 +149,7 @@ This is saying "make a xfs filesystem with a size of 512 at /dev/vdb".  You shou
 ``` mkdir -p /data/brick2 ``` ON VIRTUAL MACHINE 2
 
 
-**1d)** 
+**1d)**
 Edit our /etc/fstab file so that our new filesystem is mounted at /data/brick<number> every time the computer boots.
 
 
@@ -165,7 +165,7 @@ While we're at it, go ahead and mount the filesystem:
 Bam, we just created one brick on two seperate servers for a total of two bricks. Next we'll create a volume out of these two bricks.
 
 
-####Step 2 - Creating the Volume)
+#### Step 2 - Creating the Volume)
 
 
 **2a)** First things first we need to install some damn dependencies... On your third virtual machine (or host machine) run the following command:
@@ -195,7 +195,7 @@ Go ahead and open up ```/etc/hosts```.  Find your server's IP addresses by runni
 Let's break this down a bit.  We're creating a new volume named *volume1* with a *replica value of 2* and using virtual1's brick1 and virtual2's brick2 for our volume.
 
 
-One of the more important parts here is the replica 2 bit.  In our previous command we created a two node distributed volume with a two-way mirror.  In other words, our data is distributed across 2 nodes, and is replicated twice.  
+One of the more important parts here is the replica 2 bit.  In our previous command we created a two node distributed volume with a two-way mirror.  In other words, our data is distributed across 2 nodes, and is replicated twice.
 
 
 Let's delve deeper into replication.  It is generally thought to have a replication factor of 3.  This accounts for one node going down, and one node being updated or maintained at any one time, thus leaving your data still available.  After 3 replications we start getting diminishing returns.  The likelyhood of needing 4 replicas of a volume is unlikely enough that it is not worth the cost.  That being said, if your life literally depends on the data being there, I'd go with a replication factor of 50.
@@ -203,7 +203,7 @@ Let's delve deeper into replication.  It is generally thought to have a replicat
 
 **2d)** Mounting the volume on the client!
 
-We're almost done.  Let's mount our volume on the client.  
+We're almost done.  Let's mount our volume on the client.
 
 
 ```sudo mount -t glusterfs virtual2:/volume1 /mnt/glusterfs/```
@@ -215,7 +215,7 @@ Bam we did it.  You should be able to do this now:
 
 ---
 
-##Conclusion
+## Conclusion
 
 
-Hopefully you got a cluster up and running!  If not, feel free to bug me.  I'm happy to answer any questions people have.  This is the first blog post in a series exploring swift, swiftonfile, and putting it all together into a nodejs application using swiftonfile!  
+Hopefully you got a cluster up and running!  If not, feel free to bug me.  I'm happy to answer any questions people have.  This is the first blog post in a series exploring swift, swiftonfile, and putting it all together into a nodejs application using swiftonfile!
