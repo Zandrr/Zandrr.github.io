@@ -8,7 +8,10 @@ categories: jekyll update
 
 ### Fireworks.
 
-**I've hated school my entire life.  From the first day of kindergarten when I ran for my life to the day I set it on fire.**
+####**I've hated school my entire life.  From the first day of kindergarten when I ran for my life to the day I set it on fire.**
+
+
+
 ![Running Scared](http://alexcampbell.co/images/homeAlone.gif)
 
 A bunch of angsty twelve year olds were loitering around the front of the school when I walked up. Imagine the song "Welcome to My Life" By Simple Plan.  That's pretty much the feel of the outside of the school.  Alright everyone in your most angsty whiny Blink 182/GreenDay voice sing the lyrics to get in the mood:  "Do you ever feel like breaking downnn?  Do you ever feel out of place? Like somehow you just don't belong, and no one understands you?  [WELCOME TO MY LIFEEEE](https://www.youtube.com/watch?v=r0U0AlLVqpk)".  Ah yes, the sweet feels of being twelve and confused.  Now that we're all in the right mood, I can continue with the story.  If you need reference
