@@ -22,6 +22,17 @@ I was recently an actor in a friend's Amelie-like film.  It was awesome.
 I've been teaching an introduction to GitHub class to some peeps at my school.
 
 
+### [HackCU](http://hackcu.org)
+
+
+The website isn't the cool part, the event is.  I co-founded it, I'm currently director of outreach.
+
+
+### [Startups2Students](http://startups2students.hackcu.org)
+
+Again, the event is pretty sweet.  You're not just a piece of paper.  Meet startups in person.  Be human.
+
+
 ## Projects - Code Stuff
 
 
@@ -61,19 +72,6 @@ Real time twitter sentiment analysis.  Built with nodejs, angular.js.
 
 
 [source](https://github.com/CUBigDataClass/tweetstream)
-
-
-### [HackCU](http://hackcu.org)
-
-
-The website isn't the cool part, the event is.  I co-founded it, and built the first website iteration.
-
-
-[source](https://github.com/Zandrr/HackCU)
-
-### [Startups2Students](http://startups2students.hackcu.org)
-
-Again, the event is pretty sweet.  You're not just a piece of paper.  Meet startups in person.  Be human.
 
 
 ### [noSQL-esque encrypted data store ](https://github.com/Zandrr/phonebook.js)
