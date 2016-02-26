@@ -58,7 +58,7 @@ How about Pied Piper, the fictional company depicted in the show Silicon Valley.
 
 Alrighty, on to the good stuff...
 
-##Part 1: Creating the Nodes
+## Part 1: Creating the Nodes
 
 Make sure you have KVM installed and ready to use.  I would go through this, but that's an entirely different blog post.  I'll trust you can do this.
 

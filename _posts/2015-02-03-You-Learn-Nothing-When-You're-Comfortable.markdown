@@ -37,6 +37,6 @@ Isn't it funny how your emotions can do a complete 180 in just thirty minutes?  
 One of the best mentors I’ve ever had is named Andrew Homeyer.  He once said if you want to make a difference in this world, you need to be able to verbalize your thoughts.  You need to be able to communicate your ideas physically in front of hundreds if not thousands of people.   I always knew this was true, but I never truly understood it until I gave this talk.
 
 
-###Check it out:
+### Check it out:
 <a href="https://www.youtube.com/watch?v=WmSYLfGIvrA&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/WmSYLfGIvrA/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="5" /></a>
