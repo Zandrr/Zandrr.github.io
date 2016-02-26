@@ -5,9 +5,6 @@ date:   2015-12-20 11:12:21
 categories: jekyll update
 ---
 
-
-### Fireworks.
-
 #### **I've hated school my entire life.  From the first day of kindergarten when I ran for my life to the day I set it on fire.**
 
 
