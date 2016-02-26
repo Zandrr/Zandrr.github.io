@@ -10,13 +10,24 @@ permalink: /about/
 Let's get a beer and some delicious food. Seriously shoot me an email, I'm always down to talk about life.
 
 
+## Projects - Not Code Stuff
+
+### [Mailroom](https://www.youtube.com/watch?v=60lAmF7kcY0&app=desktop)
+
+I was recently an actor in a friend's Amelie-like film.  It was awesome.
+
+
+### [GitHub Teacher](https://www.youtube.com/watch?v=WmSYLfGIvrA&feature=youtu.be)
+
+I've been teaching an introduction to GitHub class to some peeps at my school.
+
 
 ##Projects - Code Stuff
 
 
 ### [Tandem](http://betandem.com/)
 
-At Tandem, we're unleashing the power of mentorship by enabling mentors and mentees to connect in more meaningful ways in their micro network.
+Schedule a group meeting in under 60 seconds.
 
 
 ### [SproutGuild](http://sproutguild.com)
@@ -30,7 +41,7 @@ All the best natural products, in your inbox, daily.  Built using meteor.js.
 
 ### [FoxyLib](http://foxylib.co/)
 
-You and your company spend more time than necessary downloading software. Allow Foxy Lib to do the heavy lifting for you. 
+You and your company spend more time than necessary downloading software. Allow Foxy Lib to do the heavy lifting for you.
 
 
 
@@ -77,15 +88,3 @@ Suggest-o-matic spotify song generator.  Smarter than Pandora.  Built with node.
 ### [CU Ratings](https://github.com/Zandrr/CUratings)
 
 Ah my first project ever.  This was the first time I have ever used PHP, MySQL, HTML/CSS.
-
-
-## Projects - Not Code Stuff
-
-### [Mailroom](https://www.youtube.com/watch?v=60lAmF7kcY0&app=desktop)
-
-I was recently an actor in a friend's Amelie-like film.  It was awesome.
-
-
-### [GitHub Teacher](https://www.youtube.com/watch?v=WmSYLfGIvrA&feature=youtu.be)
-
-I've been teaching an introduction to GitHub class to some peeps at my school.
