@@ -5,7 +5,7 @@ permalink: /about/
 ---
 ### Where I talk about me.
 
-*I'm a computer science and business person. I want to use my skill set to build something truly amazing with truly amazing people.  I'm currently a software engineer at Twitter.*
+*I'm a computer science and business person. I want to use my skill set to build something truly amazing with truly amazing people.  I'm currently a software engineering intern at Twitter.*
 
 Let's get a beer and some delicious food. Seriously shoot me an email, I'm always down to talk about life.
 
@@ -22,7 +22,7 @@ I was recently an actor in a friend's Amelie-like film.  It was awesome.
 I've been teaching an introduction to GitHub class to some peeps at my school.
 
 
-##Projects - Code Stuff
+## Projects - Code Stuff
 
 
 ### [Tandem](http://betandem.com/)
@@ -71,6 +71,10 @@ The website isn't the cool part, the event is.  I co-founded it, and built the f
 
 [source](https://github.com/Zandrr/HackCU)
 
+### [Startups2Students](http://startups2students.hackcu.org)
+
+Again, the event is pretty sweet.  You're not just a piece of paper.  Meet startups in person.  Be human.
+
 
 ### [noSQL-esque encrypted data store ](https://github.com/Zandrr/phonebook.js)
 
@@ -87,4 +91,4 @@ Suggest-o-matic spotify song generator.  Smarter than Pandora.  Built with node.
 
 ### [CU Ratings](https://github.com/Zandrr/CUratings)
 
-Ah my first project ever.  This was the first time I have ever used PHP, MySQL, HTML/CSS.
+Ah my first project ever.  This was the first time I have ever used PHP, MySQL, HTML/CSS. It's *not so good*.

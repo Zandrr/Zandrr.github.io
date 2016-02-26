@@ -25,6 +25,7 @@ I see the people and I saunter on over because I'm a motherfucking aloof, way to
 
 Gavin was  5'5", which meant he towered over all of his 5' peers. He had a nice prepubescent mustache too.  Damn Gavin, sucks you stopped growing in middle school.  Everyone please take a moment to pour some out for my homie, Gavin, and his lack of growth past middle school.  Anyways, a bunch of kids were engulfed around this dude, quietly, but excitedly stirring.
 
+
 I made my way through the crowd and saw that the peeps were all crowded around Gavin's backpack.  Peeps were peeking (that sounds weird, but I like it.  "peeps peeking") in the bag and gasping.  I finally get a look inside and in my head I enviously whisper, "fireworks".  I ask Gavin if I can buy some.  "Who needs lunch when you have 'fireworks'", I thought (by the way, every time I write "fireworks" you need to whisper it like you're an excited angsty twelve-year-old).  You must understand, getting fireworks when you're twelve in a state where they're illegal in is like getting a small piece of medium-rare steak after cows have been extinct for 100 years due to the great cow rebellion of 2019.
 
 
