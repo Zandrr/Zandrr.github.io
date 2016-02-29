@@ -52,7 +52,7 @@ Anyways, the frog is hurdling towards me, and I totally caught it. Sorry to let 
 Holy shit, I'm excited to look at my spoils.  The second I get in the bathroom, I whip out my lighter from my cool side pocket.  I start playing with it.  I hesitantly take out the sparkler and move the flame of the lighter closer to it.  "No, no , no! Don't light it Alex.  You'll get in trouble!".  I move the lighter away.  "Come on, light it Pablo!  Just a little bit."  Apparently, Pablo was much more level headed than Alex was. And apparently I've developed schizophrenia for this story.
 
 
-I lit it just a little.  Did you know that fireworks aren't supposed to be extinguished?  It wouldn't go out under the sink water. I threw it in the trash can and b-line out of the bathroom, back to class.
+I lit it just a little.  Did you know that fireworks aren't supposed to be extinguished?  It wouldn't go out under the sink water. I threw it in the trash can and b-lined out of the bathroom, back to class.
 
 
  When I get back into class, a few more nouns are tossed around, and after a couple minutes: "EHHHH, EHHHHH, EHHHHH". That was my fire-alarm noise.  My fire-alarm noise making skills are about on par with my ability to wink.  "Fuck", I thought.  "Oh jeez, Alex, you really did it this time".  We all get funneled outside.  The first person I see is Mr.Grubb.  He catches my eye and looks at me as if to say: "I KNOW YOU HAD SOMETHING TO DO WITH THIS".  He calmly walks over to me and says: "Office. Now."
