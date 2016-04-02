@@ -17,7 +17,7 @@ A bunch of angsty twelve year olds were loitering around the front of the school
 Now that we're all in the right mood, I can continue with the story.
 
 
-The first person I make eye-contact with is Mr.Grubb.  Mr.Grubb is a 6'4" ex-military lookin' dude. We were pretty tight.  He looked my right in the eye and gave me a look like: "Don't you fucking dare pull any shit today, Campbell”.
+The first person I make eye-contact with is Mr.Grubb.  Mr.Grubb is a 6'4" ex-military lookin' dude. We were pretty tight.  He looked me right in the eye and gave me a look like: "Don't you fucking dare pull any shit today, Campbell”.
 
  I look back at him with my fantastic shit-eating grin as if to say: "Who?  Little ole' me?  Mr.Grubb, I would *never*!".  But before I could give him my signature 2-eyed wink, (winking is hard) I was distracted by a small gathering of children, well they're children to me now, but at the time I guess they were just people.
 
