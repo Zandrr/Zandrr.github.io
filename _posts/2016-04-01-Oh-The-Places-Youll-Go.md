@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Oh the places you'll go at HackCU"
-date:   2015-04-01 19:38:21
+date:   2016-04-01 19:38:21
 categories: jekyll update
 ---
 
