@@ -5,7 +5,13 @@ date:   2016-04-01 19:38:21
 categories: jekyll update
 ---
 
-[PDF version with pretty pictures!](https://speakerdeck.com/zandrr/hackcu-oh-the-places-youll-go)
+
+## Video!
+<a href="https://www.youtube.com/watch?v=OvHkJIFx6aA&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/OvHkJIFx6aA/0.jpg"
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="5"/></a>
+
+
+## Words!
 
 Congratulations!  
 Today is your day.  
@@ -175,4 +181,7 @@ You're off the Great Places!
 Today is your day!  
 Your hackathon is waiting.  
 So...get on your way!  
+
+
+[PDF version with pretty pictures!](https://speakerdeck.com/zandrr/hackcu-oh-the-places-youll-go)
 
